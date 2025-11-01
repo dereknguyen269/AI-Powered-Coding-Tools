@@ -10,6 +10,7 @@
 
 ## 📋 Table of Contents
 - [🛡️ Universal Best Practices](#universal-best-practices)
+- [🔗 Best Practices & Learning Resources](#best-practices--learning-resources)
 
 ## Universal Best Practices
 
@@ -33,3 +34,8 @@ These core strategies apply to **all** AI coding assistants, ensuring you get ac
 * **Review Before Committing:** **Never blindly accept** generated code. Treat AI output as a draft that requires human review for logic, edge cases, and security.
 * **Test Generated Code:** Prioritize **testing** (manual and automated) on AI-generated components, especially security-critical or performance-sensitive parts.
 * **Maintain Fundamentals:** Use AI to **accelerate** your work, not replace your understanding. You must still be the domain expert and final arbiter of code quality.
+
+---
+
+## Best Practices & Learning Resources
+
