@@ -10,7 +10,7 @@
 
 ## 📋 Table of Contents
 - [🛡️ Universal Best Practices](#universal-best-practices)
-- [🔗 Best Practices & Learning Resources](#best-practices--learning-resources)
+- [🔗 Best Practices & Awesome Learning Resources](#best-practices--learning-resources)
 
 ## Universal Best Practices
 
@@ -37,5 +37,27 @@ These core strategies apply to **all** AI coding assistants, ensuring you get ac
 
 ---
 
-## Best Practices & Learning Resources
+## Best Practices & Awesome Learning Resources
+- [system-prompts-and-models-of-ai-tools](https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools)
+- [awesome-cursorrules](https://github.com/PatrickJS/awesome-cursorrules)
+- [Rules template](https://github.com/Bhartendu-Kumar/rules_template)
+- [rulebook-ai](https://github.com/botingw/rulebook-ai)
+- [LEAKED SYSTEM PROMPTS](https://github.com/elder-plinius/CL4R1T4S)
+- [devin.cursorrules](https://github.com/grapeot/devin.cursorrules)
+- [agent-rules](https://github.com/steipete/agent-rules)
+- [awesome-cursor-rules-mdc](https://github.com/sanjeed5/awesome-cursor-rules-mdc)
+- [Awesome Vibe Coding](https://github.com/filipecalegario/awesome-vibe-coding)
+- [awesome-ai-coding-tools](https://github.com/ai-for-developers/awesome-ai-coding-tools)
+- [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code)
+- [awesome-ai-system-prompts](https://github.com/dontriskit/awesome-ai-system-prompts)
+- [awesome-claude-agents](https://github.com/vijaythecoder/awesome-claude-agents)
+- [awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents)
+- [context-engineering-intro](https://github.com/coleam00/context-engineering-intro/tree/main)
+- [claude-code-templates](https://github.com/davila7/claude-code-templates)
+- [claude-code-security-review](https://github.com/anthropics/claude-code-security-review)
+- [claude-code-guide](https://github.com/zebbern/claude-code-guide)
+- [claude-code-subagents-collection](https://github.com/davepoon/claude-code-subagents-collection)
+- [how-to-build-a-coding-agent](https://github.com/ghuntley/how-to-build-a-coding-agent)
+- [claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase)
+   
 
