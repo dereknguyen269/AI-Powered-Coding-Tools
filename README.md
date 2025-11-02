@@ -57,7 +57,9 @@ These core strategies apply to **all** AI coding assistants, ensuring you get ac
 - [claude-code-security-review](https://github.com/anthropics/claude-code-security-review)
 - [claude-code-guide](https://github.com/zebbern/claude-code-guide)
 - [claude-code-subagents-collection](https://github.com/davepoon/claude-code-subagents-collection)
+- [Mastering-GitHub-Copilot-for-Paired-Programming](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming)
+- [claude-code-settings](https://github.com/feiskyer/claude-code-settings)
 - [how-to-build-a-coding-agent](https://github.com/ghuntley/how-to-build-a-coding-agent)
 - [claude-code-infrastructure-showcase](https://github.com/diet103/claude-code-infrastructure-showcase)
-   
+- [Spec-driven development](https://github.com/gotalab/cc-sdd)
 
