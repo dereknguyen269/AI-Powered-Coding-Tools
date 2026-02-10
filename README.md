@@ -85,6 +85,7 @@ AI can only produce high-quality results when it understands the **full context*
 | Windsurf | AI-enhanced editor focused on workflow efficiency |
 | Kiro | AI-powered development environment for rapid prototyping |
 | Antigravity | Lightweight AI assistant for code generation and refactoring |
+| Codex | Lightweight coding agent from OpenAI that runs in terminal |
 | Replit AI | Cloud-based IDE with built-in AI and deployment |
 | Zed Editor | High-performance collaborative editor with AI support |
 | Lovable | AI platform for building and deploying web applications |
@@ -200,6 +201,10 @@ AI can only produce high-quality results when it understands the **full context*
 ---
 ### TRAE
 - https://github.com/jojomensah89/awesome-trae
+
+---
+### Codex
+- [Agent Skills](https://github.com/openai/skills)
 
 ---
 
