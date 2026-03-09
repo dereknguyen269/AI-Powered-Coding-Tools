@@ -24,14 +24,14 @@ They help you leverage AI effectively **without sacrificing code quality, securi
 
 * **Be specific and constrained**  
   Avoid vague prompts. Clearly describe *what* you want, *how* it should be done, and *within which constraints*.  
-  > ❌ “Refactor this code”  
-  > ✅ “Refactor this function to use async/await, add input validation, and apply TypeScript generics.”
+  > ❌ "Refactor this code"  
+  > ✅ "Refactor this function to use async/await, add input validation, and apply TypeScript generics."
 
 * **Define the expected output**  
   Examples:
-  - “Generate **unit tests using Jest**”
-  - “Return a **Mermaid class diagram**”
-  - “Output **only the code diff**, no explanation”
+  - "Generate **unit tests using Jest**"
+  - "Return a **Mermaid class diagram**"
+  - "Output **only the code diff**, no explanation"
 
 * **Iterate instead of over-prompting**  
   Start simple, review the output, then refine.  
@@ -51,7 +51,7 @@ AI can only produce high-quality results when it understands the **full context*
 * **Reference related code**
   Do not expect the AI to infer your architecture.
   > *Example:*  
-  > “This new endpoint must follow the same error handling pattern as `UserService.ts`.”
+  > "This new endpoint must follow the same error handling pattern as `UserService.ts`."
 
 * **Explain intent and business logic**
   Tell the AI *why* the code exists, not just *what* to write.
@@ -70,7 +70,7 @@ AI can only produce high-quality results when it understands the **full context*
   - Performance-critical paths
 
 * **AI accelerates — it does not replace expertise**  
-  If you don’t fully understand the generated code, you shouldn’t ship it.
+  If you don't fully understand the generated code, you shouldn't ship it.
 
 ---
 
