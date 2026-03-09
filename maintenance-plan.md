@@ -47,10 +47,11 @@
 6. https://github.com/gotalab/cc-sdd
 
 ### ✅ Tools Created
-1. `fix_markdown_links.py` - Fixes markdown formatting issues
-2. `check_links.py` - Improved markdown-aware link checker
-3. `corrected-link-report.md` - Accurate link status report
-4. `maintenance-report.md` - Comprehensive maintenance summary
+1. `scripts/fix_markdown_links.py` - Fixes markdown formatting issues
+2. `scripts/check_links.py` - Improved markdown-aware link checker
+3. `scripts/link_checker.py` - Original link checker
+4. `corrected-link-report.md` - Accurate link status report
+5. `maintenance-report.md` - Comprehensive maintenance summary
 
 ## Remaining Tasks
 

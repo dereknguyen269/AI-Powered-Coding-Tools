@@ -6,9 +6,10 @@
 1. `corrected-link-report.md` - Accurate link status (all links working!)
 2. `maintenance-report.md` - Comprehensive maintenance summary
 3. `maintenance-plan.md` - Updated with completed tasks
-4. `link_checker.py` - Improved link checking tool
-5. `check_links.py` - Markdown-aware link checker
-6. `fix_markdown_links.py` - Link formatting fixer
+4. `scripts/link_checker.py` - Improved link checking tool
+5. `scripts/check_links.py` - Markdown-aware link checker
+6. `scripts/fix_markdown_links.py` - Link formatting fixer
+7. `scripts/push_branch.sh` - Git push helper script
 
 ### Optional Community Files:
 7. `CONTRIBUTING.md` - Contributor guidelines template
@@ -27,11 +28,12 @@ git checkout -b maintenance/link-check-fix-2026-03-09
 
 # Copy maintenance files (adjust paths as needed)
 cp /path/to/maintenance-files/*.md .
-cp /path/to/maintenance-files/*.py .
+cp /path/to/maintenance-files/scripts/*.py scripts/
+cp /path/to/maintenance-files/scripts/*.sh scripts/
 
 # Stage changes
 git add corrected-link-report.md maintenance-report.md maintenance-plan.md
-git add link_checker.py check_links.py fix_markdown_links.py
+git add scripts/link_checker.py scripts/check_links.py scripts/fix_markdown_links.py scripts/push_branch.sh
 git add CONTRIBUTING.md CODE_OF_CONDUCT.md README-link-check.md
 
 # Commit
@@ -94,8 +96,9 @@ git commit -m "fix: Resolve broken links issue #1
 - `corrected-link-report.md` - Link validation results
 - `maintenance-report.md` - Comprehensive maintenance summary
 - `maintenance-plan.md` - Updated maintenance schedule
-- `link_checker.py` / `check_links.py` - Improved tools
-- `fix_markdown_links.py` - Link formatting fixer
+- `scripts/link_checker.py` / `scripts/check_links.py` - Improved tools
+- `scripts/fix_markdown_links.py` - Link formatting fixer
+- `scripts/push_branch.sh` - Git push helper script
 - `CONTRIBUTING.md` - Contributor guidelines
 - `CODE_OF_CONDUCT.md` - Community standards
 

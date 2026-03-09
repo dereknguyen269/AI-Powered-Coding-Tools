@@ -73,11 +73,12 @@ The initial link checker reported 6 broken links due to:
 3. **Regular content audits** - Quarterly reviews
 
 ## Tools Created for Maintenance
-1. `fix_markdown_links.py` - Fixes markdown formatting issues
-2. `check_links.py` - Improved markdown-aware link checker
-3. `link-check-report.md` - Initial (incorrect) report
-4. `corrected-link-report.md` - Accurate link status
-5. `README-link-check.md` - Final verification report
+1. `scripts/fix_markdown_links.py` - Fixes markdown formatting issues
+2. `scripts/check_links.py` - Improved markdown-aware link checker
+3. `scripts/link_checker.py` - Original link checker
+4. `link-check-report.md` - Initial (incorrect) report
+5. `corrected-link-report.md` - Accurate link status
+6. `README-link-check.md` - Final verification report
 
 ## Next Maintenance Schedule
 - **Weekly:** Quick link validation (automated)
