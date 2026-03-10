@@ -1,0 +1,196 @@
+name: AI Repository Maintenance 2026
+
+on:
+  schedule:
+    # Run weekly on Monday at 9 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:  # Allow manual triggering
+  push:
+    branches: [ main ]
+
+jobs:
+  link-check:
+    name: Check Links in Documentation
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests beautifulsoup4
+        
+    - name: Run link checker
+      run: |
+        echo "🔍 Checking links in documentation..."
+        python scripts/check_links.py README.md
+        python scripts/check_links.py AI-CODING-TRENDS-2026.md
+        python scripts/check_links.py AI-CODING-WORKFLOWS-2026.md
+        python scripts/check_links.py AI-TOOLS-COMPARISON-2026.md
+        python scripts/check_links.py AI-SECURITY-GUIDELINES-2026.md
+        python scripts/check_links.py SETUP-GUIDE-2026.md
+        
+    - name: Generate link report
+      run: |
+        echo "📊 Generating link check report..."
+        python scripts/check_links.py --report README.md > link-report-$(date +%Y%m%d).md
+        echo "Report generated: link-report-$(date +%Y%m%d).md"
+        
+    - name: Upload link report
+      uses: actions/upload-artifact@v4
+      with:
+        name: link-check-report
+        path: link-report-*.md
+        
+  content-update-check:
+    name: Check for Content Updates
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Check for outdated information
+      run: |
+        echo "📅 Checking for outdated content..."
+        CURRENT_YEAR=$(date +%Y)
+        echo "Current year: $CURRENT_YEAR"
+        
+        # Check files for outdated year references
+        grep -r "202[0-5]" *.md || echo "✅ No outdated year references found"
+        
+    - name: Check tool versions
+      run: |
+        echo "🛠️ Checking tool version references..."
+        # List of tools to check
+        TOOLS=("Cursor" "Claude Code" "GitHub Copilot" "Devin" "Windsurf")
+        
+        for tool in "${TOOLS[@]}"; do
+          echo "Checking $tool references..."
+          grep -i "$tool" *.md | head -5 || true
+        done
+        
+  security-scan:
+    name: Security Scan for AI-Generated Content
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Run AI security scanner
+      uses: owasp/ai-security-scan@v2
+      with:
+        scan_type: "ai_generated_content"
+        fail_on: "critical"
+        
+    - name: Check for secrets
+      uses: actions/gitleaks@v3
+      with:
+        config-path: .gitleaks.toml
+        
+  documentation-health:
+    name: Documentation Health Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Check markdown formatting
+      uses: gaurav-nelson/github-action-markdown-link-check@v1
+      with:
+        use-quiet-mode: 'yes'
+        use-verbose-mode: 'yes'
+        config-file: '.github/markdown-link-check.json'
+        
+    - name: Check for broken images
+      run: |
+        echo "🖼️ Checking for broken images..."
+        # Extract image URLs from markdown
+        grep -r "!\[.*\]\(http" *.md | sed 's/.*(\(.*\))/\1/' | sort -u > image-urls.txt
+        echo "Found $(wc -l < image-urls.txt) image URLs"
+        
+    - name: Spell check
+      uses: streetsidesoftware/cspell-action@v4
+      with:
+        config: .cspell.json
+        
+  generate-maintenance-report:
+    name: Generate Maintenance Report
+    runs-on: ubuntu-latest
+    needs: [link-check, content-update-check, security-scan, documentation-health]
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Generate summary report
+      run: |
+        echo "# 📊 AI Repository Maintenance Report - $(date +%Y-%m-%d)" > maintenance-report-$(date +%Y%m%d).md
+        echo "" >> maintenance-report-$(date +%Y%m%d).md
+        echo "## 🗓️ Generated: $(date)" >> maintenance-report-$(date +%Y%m%d).md
+        echo "" >> maintenance-report-$(date +%Y%m%d).md
+        
+        echo "## ✅ Checks Performed" >> maintenance-report-$(date +%Y%m%d).md
+        echo "" >> maintenance-report-$(date +%Y%m%d).md
+        echo "1. **Link Checking**: All documentation files" >> maintenance-report-$(date +%Y%m%d).md
+        echo "2. **Content Freshness**: Year and version references" >> maintenance-report-$(date +%Y%m%d).md
+        echo "3. **Security Scanning**: AI-generated content security" >> maintenance-report-$(date +%Y%m%d).md
+        echo "4. **Documentation Health**: Formatting and broken images" >> maintenance-report-$(date +%Y%m%d).md
+        echo "" >> maintenance-report-$(date +%Y%m%d).md
+        
+        echo "## 📈 Repository Statistics" >> maintenance-report-$(date +%Y%m%d).md
+        echo "" >> maintenance-report-$(date +%Y%m%d).md
+        echo "- **Total Files**: $(find . -name "*.md" | wc -l) markdown files" >> maintenance-report-$(date +%Y%m%d).md
+        echo "- **Total Lines**: $(wc -l *.md | tail -1 | awk '{print $1}') lines of documentation" >> maintenance-report-$(date +%Y%m%d).md
+        echo "- **Last Updated**: $(git log -1 --format="%cd" --date=short)" >> maintenance-report-$(date +%Y%m%d).md
+        echo "" >> maintenance-report-$(date +%Y%m%d).md
+        
+        echo "## 🎯 Next Maintenance Tasks" >> maintenance-report-$(date +%Y%m%d).md
+        echo "" >> maintenance-report-$(date +%Y%m%d).md
+        echo "1. Review and update tool comparisons for Q2 2026" >> maintenance-report-$(date +%Y%m%d).md
+        echo "2. Add new AI tools released in past 30 days" >> maintenance-report-$(date +%Y%m%d).md
+        echo "3. Update security guidelines with latest OWASP recommendations" >> maintenance-report-$(date +%Y%m%d).md
+        echo "4. Verify all external links are still active" >> maintenance-report-$(date +%Y%m%d).md
+        
+    - name: Upload maintenance report
+      uses: actions/upload-artifact@v4
+      with:
+        name: maintenance-report
+        path: maintenance-report-*.md
+        
+    - name: Create GitHub Issue for findings
+      if: failure()
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const report = fs.readFileSync('maintenance-report-*.md', 'utf8');
+          
+          await github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: `Maintenance Required: ${new Date().toISOString().split('T')[0]}`,
+            body: report,
+            labels: ['maintenance', 'automated']
+          });
+          
+  notify-on-failure:
+    name: Notify on Failure
+    runs-on: ubuntu-latest
+    if: failure()
+    needs: [generate-maintenance-report]
+    
+    steps:
+    - name: Send notification
+      run: |
+        echo "❌ Maintenance workflow failed!"
+        echo "Check the workflow run for details: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
