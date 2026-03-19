@@ -460,6 +460,7 @@ Latest performance metrics for AI development tools:
 - https://github.com/czlonkowski/n8n-skills
 - https://github.com/obra/superpowers-skills
 - https://github.com/abubakarsiddik31/claude-skills-collection
+- https://github.com/mattpocock/skills
 
 ---
 ### GitHub Copilot
