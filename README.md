@@ -473,6 +473,18 @@ Latest performance metrics for AI development tools:
 ---
 ### Windsurf
 - https://github.com/ichoosetoaccept/awesome-windsurf
+- https://github.com/Exoaihq/windsurf-rules
+- https://github.com/aslepenkov/windsurf-rules
+
+---
+### Kiro
+- https://github.com/kirodotdev/kiro-mcp
+- https://github.com/kirodotdev/awesome-kiro
+
+---
+### Devin
+- https://github.com/grapeot/devin.cursorrules
+- https://github.com/e2b-dev/awesome-ai-agents
 
 ---
 ### TRAE
