@@ -412,6 +412,7 @@ Latest performance metrics for AI development tools:
 - https://github.com/sanjeed5/awesome-cursor-rules-mdc
 - https://github.com/kleneway/awesome-cursor-mpc-server
 
+
 ---
 ### Claude Code
 - https://github.com/anthropics/claude-cookbooks
@@ -426,6 +427,7 @@ Latest performance metrics for AI development tools:
 - https://github.com/wesammustafa/Claude-Code-Everything-You-Need-to-Know
 - https://github.com/zilliztech/claude-context
 - https://github.com/ruvnet/claude-flow
+- https://github.com/steipete/agent-rules
 - https://github.com/peterkrueck/Claude-Code-Development-Kit
 
 **Templates:**
@@ -492,8 +494,8 @@ Latest performance metrics for AI development tools:
 
 ---
 ### Devin
-- https://github.com/cognition-ai/devin-docs
-- https://github.com/entropy-research/devon
+- https://github.com/grapeot/devin.cursorrules
+- https://github.com/e2b-dev/awesome-ai-agents
 
 ---
 ### Codeium
