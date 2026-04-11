@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(echo \"staged: $?\")",
+      "Bash(git commit:*)",
+      "Bash(grep -n \"^$\" README.md)",
+      "WebSearch",
+      "WebFetch(domain:claude.com)",
+      "WebFetch(domain:windsurf.com)",
+      "WebFetch(domain:www.swebench.com)",
+      "WebFetch(domain:cursor.com)",
+      "WebFetch(domain:www.anthropic.com)"
+    ]
+  },
+  "enabledPlugins": {
+    "autoresearch@autoresearch": true
+  }
+}

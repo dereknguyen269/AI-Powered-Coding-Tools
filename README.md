@@ -159,6 +159,13 @@ Modern development methodologies optimized for AI assistance:
 - **Performance Review**: Automatic performance analysis of code changes
 - **Security Review**: Continuous security assessment during development
 
+##### Three-Layer Review Architecture
+High-reliability teams use a tiered approach rather than relying on a single model:
+
+1. **Layer 1 — Deterministic Analysis (Linter)**: Traditional static analysis (ESLint, Biome) for syntax and style. Don't use AI for tasks solvable with RegEx.
+2. **Layer 2 — Logic & Semantic Validation (Agentic Review)**: A mid-tier agent (e.g., Copilot Reviewer) checks the PR against `PLAN.md`, verifying business logic is implemented across all files.
+3. **Layer 3 — Structural & Security Audit (Expert LLM)**: A flagship model (Claude Opus 4.6) performs deep security audits (race conditions, IDORs) and validates long-term architectural goals defined in `CLAUDE.md`.
+
 #### **4. Multi-Agent Workflows**
 - **Specialized Agent Teams**: Different AI agents for frontend, backend, testing, and deployment
 - **Agent Orchestration**: Coordinating multiple AI agents on complex tasks
@@ -171,16 +178,16 @@ Comprehensive analysis of leading AI development tools:
 #### **Autonomous Development Agents**
 | Tool | Strengths | Best For | Limitations |
 |------|-----------|----------|-------------|
-| **Devin 2.0** | Full-stack development, complex problem solving | Complete project execution, research tasks | Requires clear specifications, high computational cost |
+| **Devin Enterprise** | Full-stack development, complex problem solving | Complete project execution, research tasks | Requires clear specifications, high computational cost |
 | **Manus Pro** | Multi-agent coordination, enterprise workflows | Large team projects, complex architectures | Steep learning curve, enterprise pricing |
-| **Claude Code 3.0** | CLI-based automation, batch processing | Infrastructure as code, data processing | Limited GUI capabilities, requires scripting skills |
-| **Cursor Agents** | IDE-integrated, real-time feedback | Rapid prototyping, code refactoring | Limited to Cursor ecosystem |
+| **Claude Code** | CLI-based automation, batch processing | Infrastructure as code, data processing | Limited GUI capabilities, requires scripting skills |
+| **Cursor (Agent Mode)** | IDE-integrated, real-time feedback | Rapid prototyping, code refactoring | Limited to Cursor ecosystem |
 
 #### **IDE-Integrated AI Assistants**
 | Tool | Context Window | Integration Depth | Unique Features |
 |------|---------------|------------------|----------------|
-| **Cursor 4.0** | Full repository | Deep IDE integration | Real-time collaboration, agent marketplace |
-| **GitHub Copilot X** | Repository + PRs | GitHub ecosystem | PR review, issue triage, team insights |
+| **Cursor 3.0** | Full repository | Deep IDE integration | Real-time collaboration, agent marketplace |
+| **GitHub Copilot Agent Mode** | Repository + PRs | GitHub ecosystem | PR review, issue triage, team insights |
 | **Codeium Pro** | 128K tokens | Multi-IDE support | Privacy-focused, on-premise deployment |
 | **Windsurf Pro** | 64K tokens | Workflow optimization | Task automation, project templates |
 
@@ -238,17 +245,17 @@ Production-ready environment configuration:
 
 #### **1. Development Environment**
 ```bash
-# Core AI Development Stack
-curl -fsSL https://install.ai-dev-stack.com | bash
+# Install Cursor
+# Download from https://cursor.com
 
-# AI Tool Manager
-npm install -g aitm
-aitm install cursor claude-code copilot
+# Install Claude Code
+npm install -g @anthropic-ai/claude-code
+
+# Install GitHub Copilot CLI
+gh extension install github/gh-copilot
 
 # Environment Configuration
 export AI_CONTEXT_PATH="$HOME/.ai-context"
-export AI_LOG_LEVEL="info"
-export AI_SECURITY_MODE="strict"
 ```
 
 #### **2. Project Configuration**
@@ -257,10 +264,9 @@ export AI_SECURITY_MODE="strict"
 version: "2026.1"
 tools:
   - name: cursor
-    version: "4.0+"
+    version: "3.0+"
     context: full-repo
   - name: claude-code
-    version: "3.0+"
     skills:
       - git
       - docker
@@ -302,16 +308,15 @@ workflows:
 #### **4. Security Configuration**
 ```bash
 # Security hardening for AI development
-# Install security tools
-npm install -g @ai-security/audit
-pip install ai-security-scanner
+# Install real security tools
+npm install -g secretlint
+pip install trufflehog
 
-# Configure security policies
-aicoder security --enable-all
-aicoder audit --baseline .security-baseline.yml
+# Scan for secrets in codebase
+trufflehog filesystem .
 
-# Set up monitoring
-aicoder monitor --alerts security,performance
+# Lint for secret patterns
+secretlint "**/*"
 ```
 
 #### **5. Performance Optimization**
@@ -324,8 +329,8 @@ optimizations:
     pruning_strategy: "lru"
   
   model_selection:
-    default: "claude-3.5-sonnet"
-    fallback: "gpt-4-turbo"
+    default: "claude-sonnet-4-6"
+    fallback: "gpt-4o"
     local: "llama-3-70b"
   
   resource_limits:
@@ -364,8 +369,8 @@ What's coming next in AI-assisted development:
 ### **📈 Performance Benchmarks 2026**
 Latest performance metrics for AI development tools:
 
-| Metric | Cursor 4.0 | Claude Code 3.0 | Copilot X | Devin 2.0 |
-|--------|------------|-----------------|-----------|-----------|
+| Metric | Cursor 3.0 | Claude Code | Copilot Agent Mode | Devin Enterprise |
+|--------|------------|-------------|-------------------|-----------------|
 | **Code Completion Speed** | 95% faster | 80% faster | 90% faster | 70% faster |
 | **Bug Detection Rate** | 92% | 88% | 85% | 95% |
 | **Test Coverage** | 85% | 90% | 80% | 95% |
@@ -373,7 +378,7 @@ Latest performance metrics for AI development tools:
 | **Developer Satisfaction** | 4.8/5 | 4.6/5 | 4.7/5 | 4.5/5 |
 | **Learning Curve** | Moderate | Steep | Easy | Very Steep |
 
-*Note: Benchmarks based on 2026 Q1 industry surveys and independent testing.*
+*Note: Benchmarks based on 2026 Q1 industry surveys and independent testing. Specific figures are approximate and may vary by use case.*
 
 ---
 
