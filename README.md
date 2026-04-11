@@ -533,6 +533,14 @@ Articles, guides, and references for learning AI-assisted development.
 - [Awesome Vibe Coding](https://github.com/filipecalegario/awesome-vibe-coding)
 - [Mastering GitHub Copilot](https://github.com/microsoft/Mastering-GitHub-Copilot-for-Paired-Programming)
 - [Spec-Driven Development with Claude Code](https://github.com/gotalab/cc-sdd)
+- [Generative AI for Beginners](https://github.com/microsoft/generative-ai-for-beginners)
+- [LLM Course](https://github.com/mlabonne/llm-course)
+- [Awesome LLM](https://github.com/Hannibal046/Awesome-LLM)
+- [Awesome AI Agents](https://github.com/e2b-dev/awesome-ai-agents)
+- [OpenHands](https://github.com/All-Hands-AI/OpenHands)
+- [Continue Dev](https://github.com/continuedev/continue)
+- [Aider](https://github.com/aider-chat/aider)
+- [SWE-agent](https://github.com/princeton-nlp/SWE-agent)
 
 ---
 
