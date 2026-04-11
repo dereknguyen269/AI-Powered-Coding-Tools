@@ -483,6 +483,17 @@ Latest performance metrics for AI development tools:
 - [Agent Skills](https://github.com/openai/skills)
 
 ---
+### Open Source AI Coding Tools
+- https://github.com/continuedev/continue
+- https://github.com/TabbyML/tabby
+- https://github.com/All-Hands-AI/OpenHands
+- https://github.com/cline/cline
+- https://github.com/aider-chat/aider
+- https://github.com/princeton-nlp/SWE-agent
+- https://github.com/stitionai/devika
+- https://github.com/paul-gauthier/aider
+
+---
 
 ## Learning Resources
 
