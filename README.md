@@ -396,6 +396,14 @@ Latest performance metrics for AI development tools:
 - https://github.com/inmve/awesome-ai-coding-techniques
 - https://github.com/devtoolsd/awesome-devtools
 - https://github.com/Cognitive-Stack/awesome-one-hit-vibe-code
+- https://github.com/microsoft/generative-ai-for-beginners
+- https://github.com/dair-ai/Prompt-Engineering-Guide
+- https://github.com/openai/openai-cookbook
+- https://github.com/anthropics/anthropic-cookbook
+- https://github.com/f/awesome-chatgpt-prompts
+- https://github.com/humanloop/awesome-chatgpt
+- https://github.com/sindresorhus/awesome
+- https://github.com/trimstray/the-book-of-secret-knowledge
 
 ---
 ### Cursor
