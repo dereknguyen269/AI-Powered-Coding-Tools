@@ -469,6 +469,9 @@ Latest performance metrics for AI development tools:
 - https://github.com/obra/superpowers-skills
 - https://github.com/abubakarsiddik31/claude-skills-collection
 - https://github.com/mattpocock/skills
+- https://github.com/uditgoenka/autoresearch
+- https://github.com/anthropics/model-context-protocol
+- https://github.com/modelcontextprotocol/servers
 
 ---
 ### GitHub Copilot
