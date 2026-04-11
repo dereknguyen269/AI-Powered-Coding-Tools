@@ -487,6 +487,15 @@ Latest performance metrics for AI development tools:
 - https://github.com/e2b-dev/awesome-ai-agents
 
 ---
+### Codeium
+- https://github.com/Exafunction/codeium.vim
+- https://github.com/Exafunction/codeium.el
+
+---
+### Replit AI
+- https://github.com/replit/replit-ai-modelfarm-typescript
+
+---
 ### TRAE
 - https://github.com/jojomensah89/awesome-trae
 
