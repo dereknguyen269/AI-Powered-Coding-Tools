@@ -31,6 +31,12 @@ def extract_markdown_links(content):
     
     return links
 
+def should_skip_link(url):
+    """
+    Return True for links that should not be checked with HTTP.
+    """
+    return url.strip().startswith("#")
+
 def check_link(url, timeout=10):
     """
     Check if a link is accessible.
@@ -97,6 +103,12 @@ def main():
         
         for text, url, line_num in links:
             print(f"Line {line_num}: [{text}]({url})")
+
+            if should_skip_link(url):
+                print("  ⏭️  Skipped (internal anchor)")
+                skipped += 1
+                print()
+                continue
             
             status, error = check_link(url)
             
@@ -144,6 +156,9 @@ def main():
             if broken > 0:
                 f.write(f"## Broken Links\n\n")
                 for text, url, line_num in links:
+                    if should_skip_link(url):
+                        continue
+
                     status, error = check_link(url)
                     if status is None or status >= 400:
                         f.write(f"### Line {line_num}: [{text}]({url})\n")
