@@ -4,11 +4,13 @@ Improved Markdown Link Checker
 Properly extracts and checks markdown links without formatting issues.
 """
 
+import os
 import re
-import requests
 import sys
-from urllib.parse import urlparse
 import time
+from urllib.parse import urlparse
+
+import requests
 
 def extract_markdown_links(content):
     """
@@ -31,7 +33,7 @@ def extract_markdown_links(content):
     
     return links
 
-def check_link(url, timeout=10):
+def check_link(url, *, timeout=10, base_dir=None):
     """
     Check if a link is accessible.
     Returns (status_code, error_message)
@@ -39,14 +41,28 @@ def check_link(url, timeout=10):
     try:
         # Clean the URL - remove trailing punctuation that might be markdown formatting
         cleaned_url = url.strip()
+
+        if cleaned_url.startswith("#"):
+            return -1, "Skipped (internal anchor)"
+
+        if cleaned_url.startswith("mailto:"):
+            return -1, "Skipped (mailto)"
         
         # Common markdown formatting errors
         if cleaned_url.endswith(')') and '(' not in cleaned_url:
             cleaned_url = cleaned_url.rstrip(')')
         
-        # Skip if it's not a valid URL
         parsed = urlparse(cleaned_url)
-        if not parsed.scheme or not parsed.netloc:
+        if not parsed.scheme:
+            # Relative links are treated as local paths when possible.
+            # (This keeps link checking useful even in offline environments.)
+            if base_dir:
+                local_path = os.path.normpath(os.path.join(base_dir, cleaned_url))
+                if os.path.exists(local_path):
+                    return -1, "Skipped (local file exists)"
+                return None, "Local file not found"
+            return None, "Invalid URL format"
+        if not parsed.netloc:
             return None, "Invalid URL format"
         
         # Make the request
@@ -94,13 +110,20 @@ def main():
         working = 0
         broken = 0
         skipped = 0
+        results = []
+
+        base_dir = os.path.dirname(os.path.abspath(input_file))
         
         for text, url, line_num in links:
             print(f"Line {line_num}: [{text}]({url})")
             
-            status, error = check_link(url)
+            status, error = check_link(url, base_dir=base_dir)
+            results.append((text, url, line_num, status, error))
             
-            if status is None:
+            if status == -1:
+                print(f"  ⏭️  {error}")
+                skipped += 1
+            elif status is None:
                 print(f"  ❌ Error: {error}")
                 broken += 1
             elif status == 200:
@@ -143,8 +166,9 @@ def main():
             
             if broken > 0:
                 f.write(f"## Broken Links\n\n")
-                for text, url, line_num in links:
-                    status, error = check_link(url)
+                for text, url, line_num, status, error in results:
+                    if status in (-1, 200) or (status is not None and 300 <= status < 400):
+                        continue
                     if status is None or status >= 400:
                         f.write(f"### Line {line_num}: [{text}]({url})\n")
                         f.write(f"- URL: {url}\n")

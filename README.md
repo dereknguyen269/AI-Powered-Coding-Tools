@@ -547,7 +547,7 @@ Articles, guides, and references for learning AI-assisted development.
 - [Awesome AI Agents](https://github.com/e2b-dev/awesome-ai-agents)
 - [OpenHands](https://github.com/All-Hands-AI/OpenHands)
 - [Continue Dev](https://github.com/continuedev/continue)
-- [Aider](https://github.com/aider-chat/aider)
+- [Aider](https://github.com/paul-gauthier/aider)
 - [SWE-agent](https://github.com/princeton-nlp/SWE-agent)
 
 ---
