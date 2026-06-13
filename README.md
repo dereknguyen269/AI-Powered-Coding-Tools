@@ -1,6 +1,6 @@
 # 🚀 AI-Powered Coding Tools: Best Practices & Mastery Guide
 
-> Last reviewed: May 16, 2026. AI coding tools change quickly; verify pricing,
+> Last reviewed: June 13, 2026. AI coding tools change quickly; verify pricing,
 > model availability, and enterprise controls before making production decisions.
 
 <div align="center">
@@ -80,47 +80,100 @@ AI can only produce high-quality results when it understands the **full context*
 
 ## 🧰 Supported Tools & IDEs
 
-| Tool / IDE | Description |
+### AI-First Code Editors
+| Tool | Description |
 |-----------|------------|
 | Cursor | AI-first code editor with strong full-repo context |
-| Claude Code | CLI-based AI coding assistant for large tasks |
-| GitHub Copilot | Real-time AI pair programmer |
-| Devin | Autonomous AI software engineer |
-| Windsurf | AI-enhanced editor focused on workflow efficiency |
-| Kiro | Spec-driven AI development environment with IDE, CLI, and web workflows |
-| Antigravity | Lightweight AI assistant for code generation and refactoring |
-| Codex | OpenAI coding agent available in app, CLI, IDE extension, and web workflows |
-| Replit AI | Cloud-based IDE with built-in AI and deployment |
-| Zed Editor | High-performance collaborative editor with AI support |
-| Lovable | AI platform for building and deploying web applications |
-| Bolt.new | Instant AI-driven web app generation |
-| TRAE | AI-integrated editor for coding and debugging |
-| v0 | AI-driven UI and full-stack prototyping tool (Vercel) |
-| Manus | Autonomous AI agent for project-level execution |
-| Qoder | AI-powered editor with intelligent suggestions |
-| Tabnine | Privacy-focused AI code completion |
-| JetBrains IDEs | Full IDE suite with AI plugins |
-| Windsurf Plugins / Codeium | AI completion plugins under the Windsurf ecosystem |
-| Qodo | AI code review, testing, and SDLC governance |
+| Devin Desktop | AI-enhanced editor with Devin Cloud integration, Devin for Terminal, and Agent Command Center |
+| Zed Editor | High-performance collaborative editor built in Rust with integrated AI assistance |
+| PearAI | Open-source AI-powered code editor |
+| Aide | Open-source AI-native IDE with proactive agents, built on VS Code |
+| Kilo Code | Open-source VS Code extension supporting 500+ models at zero API markup |
+
+### CLI-Based Coding Agents
+| Tool | Description |
+|-----------|------------|
+| Claude Code | CLI-based AI coding assistant with Fable 5, Opus 4.8, and 1M context window |
+| GitHub Copilot CLI (`gh copilot`) | Terminal-native agentic development, now generally available |
+| Codex CLI | OpenAI's CLI coding agent with GPT-5.3-Codex |
+| Gemini CLI | Google's open-source terminal coding agent with free Gemini access |
+| Devin for Terminal | CLI agent with local/cloud handoff, multi-model (Opus 4.7, GPT-5.5, SWE-1.6) |
 | Aider | Open-source CLI pair programmer with Git-aware edits |
-| Sider.AI | AI-powered code review and security analysis |
+| OpenCode | Open-source terminal AI agent (95K+ stars) supporting 75+ providers |
+
+### IDE-Integrated AI Assistants
+| Tool | Description |
+|-----------|------------|
+| GitHub Copilot | Real-time AI pair programmer integrated across VS Code, JetBrains, and GitHub |
+| JetBrains AI (Junie) | AI coding agent in JetBrains IDEs that plans, writes, tests, and refactors |
+| Cody (Sourcegraph) | AI assistant for code understanding, navigation, and generation across codebases |
+| TRAE | Adaptive AI IDE by ByteDance for faster coding |
+| Supermaven | Extremely fast AI code completion with 1M token context |
+
+### Autonomous Coding Agents
+| Tool | Description |
+|-----------|------------|
+| Devin | Autonomous AI software engineer (formerly Windsurf, rebranded June 2026) |
+| Manus | Autonomous AI agent for project-level execution |
+| OpenHands (OpenDevin) | Open-source AI software engineer for autonomous development |
+| GPT Engineer | AI agent for building full applications from natural language |
+| Fine | AI dev agent that understands requirements and iterates autonomously |
+
+### App Builders (No-Code/Low-Code)
+| Tool | Description |
+|-----------|------------|
+| Lovable | AI platform for building and deploying web applications |
+| Bolt.new | Instant AI-driven web app generation in browser |
+| v0 | AI-driven UI and full-stack prototyping tool (Vercel) |
+| Replit AI | Cloud-based IDE with built-in AI and deployment |
+| Create.xyz | AI-powered app creation from natural language |
+| Bolt.diy | Open-source fork of Bolt.new supporting any LLM |
+
+### Code Completion & Plugins
+| Tool | Description |
+|-----------|------------|
+| Tabnine | Privacy-focused AI code completion |
+| Codeium | Free AI code completion for 70+ languages and 40+ IDEs |
+| JetBrains AI | Integrated AI for code completion and analysis in all JetBrains IDEs |
+| Amazon Q Developer | AI assistant for code completion, debugging, and AWS integration |
+| Google Code Assist | AI coding assistant for Google Cloud developers |
+| Refact.ai | Open-source AI code completion and refactoring with self-hosting |
+
+### Code Review & Quality
+| Tool | Description |
+|-----------|------------|
+| Qodo | AI code review, testing, and SDLC governance (formerly CodiumAI) |
+| CodeRabbit | AI-driven contextual pull request reviews |
+| Sourcery | AI code reviewer supporting 30+ languages |
+| Sweep | AI agent for automating PR reviews and fixes |
+| Greptile | AI bot for in-depth code review and PR analysis |
+
+### Other AI Tools
+| Tool | Description |
+|-----------|------------|
+| Kiro | Spec-driven AI development environment with IDE, CLI, and web workflows |
+| Antigravity | Google's agent-first IDE with multi-agent orchestration and Gemini 3 Pro |
+| Codex | OpenAI coding agent available in app, CLI, IDE extension, and web workflows |
+| Roo Code | Popular open-source VS Code extension with multi-model support |
+| Cline | VS Code extension with full file system access and autonomous coding |
+| Pieces.app | AI-powered code snippet management and sharing |
 | Other AI Tools | Prompts, rules, agents, and templates |
 
 ---
 
 ## 🚀 2026 AI Development Resources
 
-### **🗓️ Current Snapshot - May 2026**
+### **🗓️ Current Snapshot - June 2026**
 Use this section as the starting point for weekly maintenance:
 
 | Area | What changed | Source to monitor |
 |------|--------------|------------------|
-| Cursor | Cursor 3.0 introduced the Agents Window, parallel agents, worktree workflows, Design Mode, and a stronger agent-centered interface. | [Cursor 3.0 changelog](https://cursor.com/changelog/3-0) |
-| GitHub Copilot CLI | The old `github/gh-copilot` extension is deprecated; current Copilot CLI runs through `gh copilot` and is generally available for Copilot subscribers. | [GitHub Copilot CLI GA](https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/) |
-| Claude Code | Claude Code model aliases now resolve by provider and account type. For Anthropic API, `opus` resolves to Opus 4.7 and `sonnet` resolves to Sonnet 4.6 at the time of this review. | [Claude Code model config](https://code.claude.com/docs/en/model-config) |
-| Codex | GPT-5.3-Codex is available with paid ChatGPT plans wherever Codex is available: app, CLI, IDE extension, and web. | [OpenAI GPT-5.3-Codex](https://openai.com/index/introducing-gpt-5-3-codex/) |
-| Windsurf | Windsurf is increasingly agent and terminal oriented, with Devin for Terminal, Devin Local in Windsurf, and current frontier model options. | [Windsurf changelog](https://windsurf.com/changelog) |
-| Kiro | Kiro positions itself around spec-driven development across IDE, CLI, and web, moving beyond rapid prototyping. | [Kiro overview](https://kiro.dev/) |
+| Cursor | Cursor 3.7 introduced Bugbot 3x faster (90s avg review), 22% cheaper, 10% more bugs found. Design Mode now supports multi-select elements and voice input. Canvas Design Mode and Context Usage Report added. Enterprise Organizations for multi-team management is now generally available. | [Cursor 3.7 changelog](https://cursor.com/changelog/3-0) |
+| Devin Desktop (formerly Windsurf) | Windsurf officially rebranded to Devin Desktop on June 2, 2026. Devin for Terminal CLI agent released, Devin Local agent, Devin Review and Quick Review. Agent Command Center with Spaces. Adaptive model router. | [Devin Desktop changelog](https://docs.devin.ai/desktop/changelog) |
+| Claude Code | Fable 5 model for large tasks. Opus 4.8 now default on Max/API tiers. Sonnet 4.6 on Pro/Team. New effort levels: low, medium, high, xhigh, max. 1M context window for extended sessions. | [Claude Code model config](https://code.claude.com/docs/en/model-config) |
+| GitHub Copilot CLI | `gh copilot` is now generally available for Copilot subscribers. Old `github/gh-copilot` extension is deprecated. | [GitHub Copilot CLI GA](https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/) |
+| Codex | GPT-5.3-Codex available with paid ChatGPT plans across app, CLI, IDE extension, and web. | [OpenAI Codex](https://en.wikipedia.org/wiki/OpenAI_Codex) |
+| Kiro | New CLI UX, GitLab integration, Claude Opus 4.8 support, TDD workflow support, Pro Max tier at $100/month. | [Kiro](https://kiro.dev/) |
 | Qodo | Qodo is the current name to track for CodiumAI-style code review, testing, and quality workflows. | [Qodo](https://www.qodo.ai/) |
 
 ### **📊 AI Coding Trends 2026**
@@ -196,26 +249,27 @@ Comprehensive analysis of leading AI development tools:
 #### **Autonomous Development Agents**
 | Tool | Strengths | Best For | Limitations |
 |------|-----------|----------|-------------|
-| **Devin Enterprise** | Full-stack development, complex problem solving | Complete project execution, research tasks | Requires clear specifications, high computational cost |
+| **Devin Enterprise** | Full-stack development, complex problem solving, cloud VM execution | Complete project execution, research tasks | Requires clear specifications, high computational cost |
 | **Manus Pro** | Multi-agent coordination, enterprise workflows | Large team projects, complex architectures | Steep learning curve, enterprise pricing |
-| **Claude Code** | Terminal-native planning, editing, and automation with provider-specific model aliases | Infrastructure as code, data processing, large refactors | Requires strong prompt discipline and usage controls |
-| **Cursor Agents** | Parallel agents, worktrees, local/cloud/SSH environments, Design Mode | Product engineering, UI iteration, repo-scale refactors | Best value is inside Cursor workflows |
-| **Codex** | OpenAI coding agent across app, CLI, IDE extension, and web | Multi-step coding, tests, codebase automation, security-focused work | Availability and model access vary by plan |
+| **Claude Code** | Terminal-native planning, editing, and automation with provider-specific model aliases. Fable 5 for sustained long autonomous sessions | Infrastructure as code, data processing, large refactors | Requires strong prompt discipline and usage controls |
+| **Cursor Agents** | Parallel agents, worktrees, local/cloud/SSH environments, Design Mode, Bugbot code review | Product engineering, UI iteration, repo-scale refactors | Best value is inside Cursor workflows |
+| **Codex** | OpenAI coding agent across app, CLI, IDE extension, and web with GPT-5.3-Codex | Multi-step coding, tests, codebase automation, security-focused work | Availability and model access vary by plan |
 
 #### **IDE-Integrated AI Assistants**
 | Tool | Context Model | Integration Depth | Unique Features |
 |------|---------------|------------------|----------------|
-| **Cursor 3.x** | Repository and agent-worktree oriented | Deep IDE and agent integration | Agents Window, parallel agents, Design Mode, `/worktree`, `/best-of-n` |
+| **Cursor 3.7** | Repository and agent-worktree oriented | Deep IDE and agent integration | Agents Window, parallel agents, Design Mode, `/worktree`, `/best-of-n`, Bugbot, Canvas |
 | **GitHub Copilot Agent Mode / CLI** | Repository, PRs, terminal sessions, GitHub context | GitHub ecosystem | Plan mode, autopilot, MCP, plugins, skills, remote delegation |
-| **Windsurf** | Editor, Cascade, terminal, and local/cloud agent handoff | Agentic IDE and terminal workflows | Devin for Terminal, Devin Local, multi-model access |
-| **Kiro** | Specs, tasks, hooks, and codebase context | IDE, CLI, and web | Spec-driven development, agent hooks, production-oriented planning |
+| **Devin Desktop (formerly Windsurf)** | Editor, Cascade, terminal, and local/cloud agent handoff | Agentic IDE and terminal workflows | Devin for Terminal, Devin Local, multi-model access, Adaptive model router, Agent Command Center |
+| **Kiro** | Specs, tasks, hooks, and codebase context | IDE, CLI, and web | Spec-driven development, agent hooks, production-oriented planning, TDD support |
 
 #### **CLI and Automation Tools**
 | Tool | Primary Use | Automation Level | Integration |
 |------|-------------|-----------------|-------------|
 | **Claude Code** | Batch processing, infrastructure, repo-scale edits | High | Shell, Git, CI/CD |
-| **GitHub Copilot CLI** | Terminal-native agentic development | High | GitHub CLI, MCP, plugins, skills |
+| **GitHub Copilot CLI** | Terminal-native agentic development via `gh copilot` | High | GitHub CLI, MCP, plugins, skills |
 | **Codex CLI / App** | Code editing, tests, agent sessions, applied research | High | Terminal, IDE extension, web, desktop app |
+| **Devin for Terminal** | CLI agent with local and cloud handoff, multi-model (Opus 4.7, GPT-5.5, SWE-1.6) | High | Terminal, Devin Desktop, Devin Cloud |
 | **Aider** | Git-aware pair programming in the terminal | Medium | Local Git repositories, many model providers |
 
 #### **Specialized Development Tools**
@@ -509,7 +563,8 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 - https://github.com/Code-and-Sorts/awesome-copilot-agents
 
 ---
-### Windsurf
+### Devin Desktop (formerly Windsurf)
+- https://docs.devin.ai/desktop/changelog
 - https://github.com/ichoosetoaccept/awesome-windsurf
 - https://github.com/Exoaihq/windsurf-rules
 - https://github.com/aslepenkov/windsurf-rules
@@ -520,9 +575,10 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 - https://github.com/kirodotdev/awesome-kiro
 
 ---
-### Devin
+### Devin (formerly Windsurf)
 - https://github.com/grapeot/devin.cursorrules
 - https://github.com/e2b-dev/awesome-ai-agents
+- https://docs.devin.ai/desktop/changelog
 
 ---
 ### Windsurf Plugins / Codeium
@@ -540,7 +596,7 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 ---
 ### Codex
 - [Agent Skills](https://github.com/openai/skills)
-- https://openai.com/index/introducing-gpt-5-3-codex/
+- [OpenAI Codex (Wikipedia)](https://en.wikipedia.org/wiki/OpenAI_Codex)
 
 ---
 ### Open Source AI Coding Tools
@@ -551,6 +607,14 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 - https://github.com/Aider-AI/aider
 - https://github.com/princeton-nlp/SWE-agent
 - https://github.com/stitionai/devika
+- https://github.com/opencode-ai/opencode
+- https://github.com/nicehero/woozles
+- https://github.com/rrsalian/auto-code
+- https://github.com/massiveart-webservices/zapgpt
+
+---
+### PearAI
+- https://github.com/nicehero/pearai
 
 ---
 
