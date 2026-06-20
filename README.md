@@ -1,6 +1,6 @@
 # 🚀 AI-Powered Coding Tools: Best Practices & Mastery Guide
 
-> Last reviewed: June 15, 2026. AI coding tools change quickly; verify pricing,
+> Last reviewed: June 20, 2026. AI coding tools change quickly; verify pricing,
 > model availability, and enterprise controls before making production decisions.
 
 <div align="center">
@@ -102,20 +102,23 @@ AI can only produce high-quality results when it understands the **full context*
 | Devin for Terminal | CLI agent with local/cloud handoff, multi-model (Opus 4.7, GPT-5.5, SWE-1.6) |
 | Aider | Open-source CLI pair programmer with Git-aware edits |
 | OpenCode | Open-source terminal AI agent (95K+ stars) supporting 75+ providers |
-| Kiro CLI | AWS's spec-driven CLI agent with TDD workflow support and GitLab integration |
+| Kiro CLI | AWS's spec-driven CLI agent with TDD workflow, GitLab/GitHub integration, and cloud sandboxes |
 | Codename Goose | Desktop and CLI agent by Block for automating tasks using LLMs and extensions |
 | SWE-agent | Princeton's autonomous agent that resolves real GitHub issues |
+| Cascade (JetBrains) | JetBrains' AI coding agent for contextual assistance within IDEs |
 
 ### IDE-Integrated AI Assistants
 | Tool | Description |
 |-----------|------------|
 | GitHub Copilot | Real-time AI pair programmer integrated across VS Code, JetBrains, and GitHub |
-| JetBrains AI (Junie) | AI coding agent in JetBrains IDEs that plans, writes, tests, and refactors |
+| JetBrains Junie | AI coding agent in JetBrains IDEs that plans, writes, tests, and refactors |
 | Cody (Sourcegraph) | AI assistant for code understanding, navigation, and generation across codebases |
 | TRAE | Adaptive AI IDE by ByteDance for faster coding |
 | Supermaven | Extremely fast AI code completion with 1M token context |
 | Augment Code | AI coding platform with deep cross-repo codebase understanding via Context Engine |
 | Tabby | Self-hosted, open-source AI coding assistant for own infrastructure |
+| Roo Code | Popular open-source VS Code extension (fork of Cline) with multi-model support and autonomous coding modes |
+| Continue | Open-source, pluggable AI code completion for VS Code and JetBrains |
 
 ### Autonomous Coding Agents
 | Tool | Description |
@@ -128,6 +131,8 @@ AI can only produce high-quality results when it understands the **full context*
 | Devon | AI software engineer for autonomous coding |
 | Rovo Dev (Atlassian) | Atlassian's terminal coding agent for Jira and Confluence integration |
 | Factory | AI platform automating repetitive coding tasks at scale |
+| Cline (Claude Dev) | VS Code extension with full file system access and autonomous coding capabilities |
+| PraisonAI | Multi-agent framework with 100+ LLM support and MCP integration |
 
 ### App Builders (No-Code/Low-Code)
 | Tool | Description |
@@ -141,6 +146,8 @@ AI can only produce high-quality results when it understands the **full context*
 | Capacity | Agentic platform using Claude Code to turn ideas into full-stack web apps |
 | Mage | Generate full-stack apps from natural language prompts |
 | Rosebud AI | Vibe coding platform for 3D games and interactive web apps |
+| Stitch (Google) | Google Labs tool using Gemini to generate multi-screen UI designs and front-end code |
+| Forge | BYOK full-stack app creator with multi-stage pipeline for Next.js apps |
 
 ### Code Completion & Plugins
 | Tool | Description |
