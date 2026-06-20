@@ -1,6 +1,6 @@
 # 🚀 AI-Powered Coding Tools: Best Practices & Mastery Guide
 
-> Last reviewed: June 13, 2026. AI coding tools change quickly; verify pricing,
+> Last reviewed: June 15, 2026. AI coding tools change quickly; verify pricing,
 > model availability, and enterprise controls before making production decisions.
 
 <div align="center">
@@ -83,12 +83,14 @@ AI can only produce high-quality results when it understands the **full context*
 ### AI-First Code Editors
 | Tool | Description |
 |-----------|------------|
-| Cursor | AI-first code editor with strong full-repo context |
+| Cursor | AI-first code editor with strong full-repo context, Bugbot, Design Mode, Canvas, and Composer 2.5 |
 | Devin Desktop | AI-enhanced editor with Devin Cloud integration, Devin for Terminal, and Agent Command Center |
 | Zed Editor | High-performance collaborative editor built in Rust with integrated AI assistance |
 | PearAI | Open-source AI-powered code editor |
 | Aide | Open-source AI-native IDE with proactive agents, built on VS Code |
 | Kilo Code | Open-source VS Code extension supporting 500+ models at zero API markup |
+| Antigravity | Google's agent-first IDE with multi-agent orchestration, browser automation, and Gemini 3 Pro (free during preview) |
+| Amp (Sourcegraph) | Agentic coding tool built on Sourcegraph's code search infrastructure with deep codebase graph |
 
 ### CLI-Based Coding Agents
 | Tool | Description |
@@ -100,6 +102,9 @@ AI can only produce high-quality results when it understands the **full context*
 | Devin for Terminal | CLI agent with local/cloud handoff, multi-model (Opus 4.7, GPT-5.5, SWE-1.6) |
 | Aider | Open-source CLI pair programmer with Git-aware edits |
 | OpenCode | Open-source terminal AI agent (95K+ stars) supporting 75+ providers |
+| Kiro CLI | AWS's spec-driven CLI agent with TDD workflow support and GitLab integration |
+| Codename Goose | Desktop and CLI agent by Block for automating tasks using LLMs and extensions |
+| SWE-agent | Princeton's autonomous agent that resolves real GitHub issues |
 
 ### IDE-Integrated AI Assistants
 | Tool | Description |
@@ -109,6 +114,8 @@ AI can only produce high-quality results when it understands the **full context*
 | Cody (Sourcegraph) | AI assistant for code understanding, navigation, and generation across codebases |
 | TRAE | Adaptive AI IDE by ByteDance for faster coding |
 | Supermaven | Extremely fast AI code completion with 1M token context |
+| Augment Code | AI coding platform with deep cross-repo codebase understanding via Context Engine |
+| Tabby | Self-hosted, open-source AI coding assistant for own infrastructure |
 
 ### Autonomous Coding Agents
 | Tool | Description |
@@ -118,6 +125,9 @@ AI can only produce high-quality results when it understands the **full context*
 | OpenHands (OpenDevin) | Open-source AI software engineer for autonomous development |
 | GPT Engineer | AI agent for building full applications from natural language |
 | Fine | AI dev agent that understands requirements and iterates autonomously |
+| Devon | AI software engineer for autonomous coding |
+| Rovo Dev (Atlassian) | Atlassian's terminal coding agent for Jira and Confluence integration |
+| Factory | AI platform automating repetitive coding tasks at scale |
 
 ### App Builders (No-Code/Low-Code)
 | Tool | Description |
@@ -128,6 +138,9 @@ AI can only produce high-quality results when it understands the **full context*
 | Replit AI | Cloud-based IDE with built-in AI and deployment |
 | Create.xyz | AI-powered app creation from natural language |
 | Bolt.diy | Open-source fork of Bolt.new supporting any LLM |
+| Capacity | Agentic platform using Claude Code to turn ideas into full-stack web apps |
+| Mage | Generate full-stack apps from natural language prompts |
+| Rosebud AI | Vibe coding platform for 3D games and interactive web apps |
 
 ### Code Completion & Plugins
 | Tool | Description |
@@ -138,6 +151,9 @@ AI can only produce high-quality results when it understands the **full context*
 | Amazon Q Developer | AI assistant for code completion, debugging, and AWS integration |
 | Google Code Assist | AI coding assistant for Google Cloud developers |
 | Refact.ai | Open-source AI code completion and refactoring with self-hosting |
+| Supermaven | Ultra-fast completions with 1M token context window |
+| Continue | Open-source, pluggable AI code completion for VS Code and JetBrains |
+| Visual Studio IntelliCode | Microsoft's AI code completion for Visual Studio |
 
 ### Code Review & Quality
 | Tool | Description |
@@ -147,6 +163,9 @@ AI can only produce high-quality results when it understands the **full context*
 | Sourcery | AI code reviewer supporting 30+ languages |
 | Sweep | AI agent for automating PR reviews and fixes |
 | Greptile | AI bot for in-depth code review and PR analysis |
+| DeepSource | Automated code review with tech debt tracking and security analysis |
+| Pixee | AI bot for security-focused PR reviews and automatic fixes |
+| What The Diff | AI tool for summarizing and analyzing code diffs |
 
 ### Other AI Tools
 | Tool | Description |
@@ -157,7 +176,9 @@ AI can only produce high-quality results when it understands the **full context*
 | Roo Code | Popular open-source VS Code extension with multi-model support |
 | Cline | VS Code extension with full file system access and autonomous coding |
 | Pieces.app | AI-powered code snippet management and sharing |
-| Other AI Tools | Prompts, rules, agents, and templates |
+| Context7 | MCP server providing up-to-date library documentation to LLMs and AI editors |
+| PraisonAI | Multi-agent framework with 100+ LLM support and MCP integration |
+| Open Interpreter | Open-source agent that runs code locally in response to natural language |
 
 ---
 
@@ -168,13 +189,13 @@ Use this section as the starting point for weekly maintenance:
 
 | Area | What changed | Source to monitor |
 |------|--------------|------------------|
-| Cursor | Cursor 3.7 introduced Bugbot 3x faster (90s avg review), 22% cheaper, 10% more bugs found. Design Mode now supports multi-select elements and voice input. Canvas Design Mode and Context Usage Report added. Enterprise Organizations for multi-team management is now generally available. | [Cursor 3.7 changelog](https://cursor.com/changelog/3-0) |
+| Cursor | Cursor 3.7+: Bugbot now 3x faster (~90s avg review), 22% cheaper, finds 10% more bugs. Design Mode supports multi-select and voice input. Canvas Design Mode and Context Usage Report added. Enterprise Organizations for multi-team management is now GA. Composer 2.5 routes to faster Composer 2 variants. SDK improvements: requestId correlation, bundled ripgrep, lighter imports. | [Cursor changelog](https://cursor.com/changelog) |
 | Devin Desktop (formerly Windsurf) | Windsurf officially rebranded to Devin Desktop on June 2, 2026. Devin for Terminal CLI agent released, Devin Local agent, Devin Review and Quick Review. Agent Command Center with Spaces. Adaptive model router. | [Devin Desktop changelog](https://docs.devin.ai/desktop/changelog) |
-| Claude Code | Fable 5 model for large tasks. Opus 4.8 now default on Max/API tiers. Sonnet 4.6 on Pro/Team. New effort levels: low, medium, high, xhigh, max. 1M context window for extended sessions. | [Claude Code model config](https://code.claude.com/docs/en/model-config) |
+| Claude Code | Fable 5 model for large tasks. Opus 4.8 now default on Max/API tiers. Sonnet 4.6 on Pro/Team. New effort levels: low, medium, high, xhigh, max. 1M context window for extended sessions. Fast mode available for quick tasks. | [Claude Code model config](https://code.claude.com/docs/en/model-config) |
 | GitHub Copilot CLI | `gh copilot` is now generally available for Copilot subscribers. Old `github/gh-copilot` extension is deprecated. | [GitHub Copilot CLI GA](https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/) |
 | Codex | GPT-5.3-Codex available with paid ChatGPT plans across app, CLI, IDE extension, and web. | [OpenAI Codex](https://en.wikipedia.org/wiki/OpenAI_Codex) |
-| Kiro | New CLI UX, GitLab integration, Claude Opus 4.8 support, TDD workflow support, Pro Max tier at $100/month. | [Kiro](https://kiro.dev/) |
-| Qodo | Qodo is the current name to track for CodiumAI-style code review, testing, and quality workflows. | [Qodo](https://www.qodo.ai/) |
+| Kiro | New CLI UX, GitLab integration, Claude Opus 4.8 support, TDD workflow support, Pro Max tier at $100/month. Web sandbox sessions, autonomous mode, spec-driven development. VS Code settings import. | [Kiro](https://kiro.dev/) |
+| Qodo | Qodo is the current name to track for CodiumAI-style code review, testing, and quality workflows. Open-source PR Agent available. | [Qodo](https://www.qodo.ai/) |
 
 ### **📊 AI Coding Trends 2026**
 The AI development landscape is evolving rapidly. Here are the key trends shaping 2026:
