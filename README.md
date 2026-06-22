@@ -1,6 +1,6 @@
 # 🚀 AI-Powered Coding Tools: Best Practices & Mastery Guide
 
-> Last reviewed: June 20, 2026. AI coding tools change quickly; verify pricing,
+> Last reviewed: June 22, 2026. AI coding tools change quickly; verify pricing,
 > model availability, and enterprise controls before making production decisions.
 
 <div align="center">
@@ -173,6 +173,8 @@ AI can only produce high-quality results when it understands the **full context*
 | DeepSource | Automated code review with tech debt tracking and security analysis |
 | Pixee | AI bot for security-focused PR reviews and automatic fixes |
 | What The Diff | AI tool for summarizing and analyzing code diffs |
+| VibeDoctor | AI code health scanner for vibe-coded apps; detects hallucinated imports, phantom packages, and security issues with MCP support |
+| Relay | Persistent memory for AI coding workflows; gives agents memory of what was built, what broke, and what's next |
 
 ### Other AI Tools
 | Tool | Description |
@@ -196,12 +198,12 @@ Use this section as the starting point for weekly maintenance:
 
 | Area | What changed | Source to monitor |
 |------|--------------|------------------|
-| Cursor | Cursor 3.7+: Bugbot now 3x faster (~90s avg review), 22% cheaper, finds 10% more bugs. Design Mode supports multi-select and voice input. Canvas Design Mode and Context Usage Report added. Enterprise Organizations for multi-team management is now GA. Composer 2.5 routes to faster Composer 2 variants. SDK improvements: requestId correlation, bundled ripgrep, lighter imports. | [Cursor changelog](https://cursor.com/changelog) |
+| Cursor | Cursor 3.7+: Composer 2.5 with nested subagents (subagents can spawn their own subagents). Bugbot now 3x faster (~90s avg review), 22% cheaper, finds 10% more bugs. Design Mode supports multi-select and voice input. Canvas Design Mode and Context Usage Report added. Enterprise Organizations for multi-team management is now GA. SDK improvements: requestId correlation, bundled ripgrep, lighter imports, workspace-scoped list_runs. | [Cursor changelog](https://cursor.com/changelog) |
 | Devin Desktop (formerly Windsurf) | Windsurf officially rebranded to Devin Desktop on June 2, 2026. Devin for Terminal CLI agent released, Devin Local agent, Devin Review and Quick Review. Agent Command Center with Spaces. Adaptive model router. | [Devin Desktop changelog](https://docs.devin.ai/desktop/changelog) |
 | Claude Code | Fable 5 model for large tasks. Opus 4.8 now default on Max/API tiers. Sonnet 4.6 on Pro/Team. New effort levels: low, medium, high, xhigh, max. 1M context window for extended sessions. Fast mode available for quick tasks. | [Claude Code model config](https://code.claude.com/docs/en/model-config) |
 | GitHub Copilot CLI | `gh copilot` is now generally available for Copilot subscribers. Old `github/gh-copilot` extension is deprecated. | [GitHub Copilot CLI GA](https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/) |
 | Codex | GPT-5.3-Codex available with paid ChatGPT plans across app, CLI, IDE extension, and web. | [OpenAI Codex](https://en.wikipedia.org/wiki/OpenAI_Codex) |
-| Kiro | New CLI UX, GitLab integration, Claude Opus 4.8 support, TDD workflow support, Pro Max tier at $100/month. Web sandbox sessions, autonomous mode, spec-driven development. VS Code settings import. | [Kiro](https://kiro.dev/) |
+| Kiro | AWS's agentic IDE with spec-driven development, TDD workflow, and cloud sandboxes. Available as IDE, CLI, Web, and Mobile interfaces. GitLab/GitHub integration, Claude Opus 4.8 support. Pro Max tier at $100/month with 5,000 credits. Web sandbox sessions with autonomous mode. Based on Code OSS with VS Code settings import. | [Kiro](https://kiro.dev/) |
 | Qodo | Qodo is the current name to track for CodiumAI-style code review, testing, and quality workflows. Open-source PR Agent available. | [Qodo](https://www.qodo.ai/) |
 
 ### **📊 AI Coding Trends 2026**
