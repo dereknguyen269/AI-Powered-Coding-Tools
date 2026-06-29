@@ -1,6 +1,6 @@
 # 🚀 AI-Powered Coding Tools: Best Practices & Mastery Guide
 
-> Last reviewed: June 22, 2026. AI coding tools change quickly; verify pricing,
+> Last reviewed: June 29, 2026. AI coding tools change quickly; verify pricing,
 > model availability, and enterprise controls before making production decisions.
 
 <div align="center">
@@ -83,29 +83,30 @@ AI can only produce high-quality results when it understands the **full context*
 ### AI-First Code Editors
 | Tool | Description |
 |-----------|------------|
-| Cursor | AI-first code editor with strong full-repo context, Bugbot, Design Mode, Canvas, and Composer 2.5 |
-| Devin Desktop | AI-enhanced editor with Devin Cloud integration, Devin for Terminal, and Agent Command Center |
+| Cursor | AI-first code editor with strong full-repo context, Bugbot, Design Mode, Canvas, and Composer with agent handoff between local and cloud sessions |
+| Devin Desktop | AI-enhanced editor (formerly Windsurf, rebranded June 2026) with Devin Cloud integration, multi-model support (Opus 4.7, GPT-5.5, SWE-1.6), and local/cloud handoff |
 | Zed Editor | High-performance collaborative editor built in Rust with integrated AI assistance |
 | PearAI | Open-source AI-powered code editor |
 | Aide | Open-source AI-native IDE with proactive agents, built on VS Code |
-| Kilo Code | Open-source VS Code extension supporting 500+ models at zero API markup |
+| Kilo Code | Open-source VS Code extension supporting 500+ models at zero API markup, superset of Cline/Roo Code |
 | Antigravity | Google's agent-first IDE with multi-agent orchestration, browser automation, and Gemini 3 Pro (free during preview) |
-| Amp (Sourcegraph) | Agentic coding tool built on Sourcegraph's code search infrastructure with deep codebase graph |
+| Amp (Sourcegraph) | Agentic coding tool built on Sourcegraph's code search infrastructure with deep codebase graph and unconstrained token usage |
 
 ### CLI-Based Coding Agents
 | Tool | Description |
 |-----------|------------|
-| Claude Code | CLI-based AI coding assistant with Fable 5, Opus 4.8, and 1M context window |
+| Claude Code | CLI-based AI coding assistant with Sonnet 4.5/4.6/4.7, Opus 4.8, and 1M context window |
 | GitHub Copilot CLI (`gh copilot`) | Terminal-native agentic development, now generally available |
-| Codex CLI | OpenAI's CLI coding agent with GPT-5.3-Codex |
-| Gemini CLI | Google's open-source terminal coding agent with free Gemini access |
+| Codex CLI | OpenAI's CLI coding agent with GPT-5.3-Codex and sandboxed code execution |
+| Gemini CLI | Google's open-source terminal coding agent with free Gemini 3 Pro access and 1M token context |
 | Devin for Terminal | CLI agent with local/cloud handoff, multi-model (Opus 4.7, GPT-5.5, SWE-1.6) |
-| Aider | Open-source CLI pair programmer with Git-aware edits |
-| OpenCode | Open-source terminal AI agent (95K+ stars) supporting 75+ providers |
+| Aider | Open-source CLI pair programmer with Git-aware edits, deep git integration |
+| OpenCode | Open-source terminal AI agent (95K+ stars) supporting 75+ providers, free and privacy-first |
 | Kiro CLI | AWS's spec-driven CLI agent with TDD workflow, GitLab/GitHub integration, and cloud sandboxes |
 | Codename Goose | Desktop and CLI agent by Block for automating tasks using LLMs and extensions |
 | SWE-agent | Princeton's autonomous agent that resolves real GitHub issues |
 | Cascade (JetBrains) | JetBrains' AI coding agent for contextual assistance within IDEs |
+| Wiggum CLI | Open-source agent that scans codebases, generates specs through AI interviews, and runs autonomous coding loops |
 
 ### IDE-Integrated AI Assistants
 | Tool | Description |
@@ -133,6 +134,11 @@ AI can only produce high-quality results when it understands the **full context*
 | Factory | AI platform automating repetitive coding tasks at scale |
 | Cline (Claude Dev) | VS Code extension with full file system access and autonomous coding capabilities |
 | PraisonAI | Multi-agent framework with 100+ LLM support and MCP integration |
+| Qoder | Agentic coding platform focused on deeper reasoning |
+| OpenASE | Open-source, ticket-driven software engineering platform orchestrating Claude Code, Codex, and Gemini CLI |
+| SwarmClaw | Self-hosted multi-agent runtime with MCP support, 23+ LLM providers, and persistent memory |
+| Codex Infinity | Autonomous coding agent that runs continuously on bare metal VPS with full root access |
+| Copilot Workspace (GitHub) | Agent-powered dev environment that turns issues into code changes with plans and specs |
 
 ### App Builders (No-Code/Low-Code)
 | Tool | Description |
@@ -148,6 +154,8 @@ AI can only produce high-quality results when it understands the **full context*
 | Rosebud AI | Vibe coding platform for 3D games and interactive web apps |
 | Stitch (Google) | Google Labs tool using Gemini to generate multi-screen UI designs and front-end code |
 | Forge | BYOK full-stack app creator with multi-stage pipeline for Next.js apps |
+| Dyad.sh | Free, local, open-source AI app builder with any model and IDE integration |
+| Pythagora | AI agent that builds apps through conversational interaction |
 
 ### Code Completion & Plugins
 | Tool | Description |
