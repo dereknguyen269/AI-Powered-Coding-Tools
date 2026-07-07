@@ -1,6 +1,6 @@
 # 🚀 AI-Powered Coding Tools: Best Practices & Mastery Guide
 
-> Last reviewed: June 29, 2026. AI coding tools change quickly; verify pricing,
+> Last reviewed: July 6, 2026. AI coding tools change quickly; verify pricing,
 > model availability, and enterprise controls before making production decisions.
 
 <div align="center">
@@ -95,7 +95,7 @@ AI can only produce high-quality results when it understands the **full context*
 ### CLI-Based Coding Agents
 | Tool | Description |
 |-----------|------------|
-| Claude Code | CLI-based AI coding assistant with Sonnet 4.5/4.6/4.7, Opus 4.8, and 1M context window |
+| Claude Code | CLI-based AI coding assistant with Sonnet 4.6/4.7, Opus 4.8, and 1M context window |
 | GitHub Copilot CLI (`gh copilot`) | Terminal-native agentic development, now generally available |
 | Codex CLI | OpenAI's CLI coding agent with GPT-5.3-Codex and sandboxed code execution |
 | Gemini CLI | Google's open-source terminal coding agent with free Gemini 3 Pro access and 1M token context |
@@ -107,6 +107,7 @@ AI can only produce high-quality results when it understands the **full context*
 | SWE-agent | Princeton's autonomous agent that resolves real GitHub issues |
 | Cascade (JetBrains) | JetBrains' AI coding agent for contextual assistance within IDEs |
 | Wiggum CLI | Open-source agent that scans codebases, generates specs through AI interviews, and runs autonomous coding loops |
+| agx | Checkpoint-based execution engine for AI coding agents with durable Wake→Work→Sleep loops across sessions |
 
 ### IDE-Integrated AI Assistants
 | Tool | Description |
@@ -139,6 +140,11 @@ AI can only produce high-quality results when it understands the **full context*
 | SwarmClaw | Self-hosted multi-agent runtime with MCP support, 23+ LLM providers, and persistent memory |
 | Codex Infinity | Autonomous coding agent that runs continuously on bare metal VPS with full root access |
 | Copilot Workspace (GitHub) | Agent-powered dev environment that turns issues into code changes with plans and specs |
+| Brood-box | Run coding agents (Claude Code, Codex, OpenCode) inside hardware-isolated microVMs with snapshot isolation |
+| AgentsMesh | Self-hostable AI Agent Workforce Platform orchestrating multiple agents across remote workstations |
+| Potpie | AI coding agent for streamlined development workflows |
+| Agent Shadow Brain | AI background code analysis agent that watches codebases and provides real-time insights |
+| OpenMagic | AI-powered coding toolbar injected via reverse proxy, capturing context and applying approved changes |
 
 ### App Builders (No-Code/Low-Code)
 | Tool | Description |
