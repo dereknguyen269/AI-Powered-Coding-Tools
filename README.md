@@ -1,6 +1,6 @@
 # 🚀 AI-Powered Coding Tools: Best Practices & Mastery Guide
 
-> Last reviewed: July 6, 2026. AI coding tools change quickly; verify pricing,
+> Last reviewed: July 13, 2026. AI coding tools change quickly; verify pricing,
 > model availability, and enterprise controls before making production decisions.
 
 <div align="center">
@@ -83,7 +83,7 @@ AI can only produce high-quality results when it understands the **full context*
 ### AI-First Code Editors
 | Tool | Description |
 |-----------|------------|
-| Cursor | AI-first code editor with strong full-repo context, Bugbot, Design Mode, Canvas, and Composer with agent handoff between local and cloud sessions |
+| Cursor | AI-first code editor (v3.8+) with strong full-repo context, Bugbot, Design Mode, Canvas, Composer, and Cursor Automations with GitHub/Slack triggers and computer use |
 | Devin Desktop | AI-enhanced editor (formerly Windsurf, rebranded June 2026) with Devin Cloud integration, multi-model support (Opus 4.7, GPT-5.5, SWE-1.6), and local/cloud handoff |
 | Zed Editor | High-performance collaborative editor built in Rust with integrated AI assistance |
 | PearAI | Open-source AI-powered code editor |
@@ -95,7 +95,7 @@ AI can only produce high-quality results when it understands the **full context*
 ### CLI-Based Coding Agents
 | Tool | Description |
 |-----------|------------|
-| Claude Code | CLI-based AI coding assistant with Sonnet 4.6/4.7, Opus 4.8, and 1M context window |
+| Claude Code | CLI-based AI coding assistant with Sonnet 4.6/4.7, Opus 4.8, Haiku 4, extended thinking, 1M context window, and model aliases |
 | GitHub Copilot CLI (`gh copilot`) | Terminal-native agentic development, now generally available |
 | Codex CLI | OpenAI's CLI coding agent with GPT-5.3-Codex and sandboxed code execution |
 | Gemini CLI | Google's open-source terminal coding agent with free Gemini 3 Pro access and 1M token context |
@@ -532,6 +532,7 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 
 ---
 ### Cursor
+- [Cursor Changelog](https://cursor.com/changelog) - Latest updates including Cursor Automations (v3.8) and mobile app
 - https://github.com/PatrickJS/awesome-cursorrules
 - https://github.com/grapeot/devin.cursorrules
 - https://github.com/sanjeed5/awesome-cursor-rules-mdc
@@ -540,6 +541,7 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 
 ---
 ### Claude Code
+- [Claude Code Docs](https://code.claude.com/docs) - Official documentation including model configuration and settings
 - https://github.com/anthropics/claude-cookbooks
 - https://github.com/hesreallyhim/awesome-claude-code
 - https://github.com/zebbern/claude-code-guide
@@ -608,13 +610,15 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 
 ---
 ### Devin Desktop (formerly Windsurf)
-- https://docs.devin.ai/desktop/changelog
+- [Devin Changelog](https://docs.devin.ai/desktop/changelog) - Latest releases and updates
+- [Devin Web](https://app.devin.ai) - Cloud interface for Devin
 - https://github.com/ichoosetoaccept/awesome-windsurf
 - https://github.com/Exoaihq/windsurf-rules
 - https://github.com/aslepenkov/windsurf-rules
 
 ---
 ### Kiro
+- https://kiro.dev/ - Agentic IDE, CLI, and Web with spec-driven development, cloud sandboxes, and GitHub/GitLab integration
 - https://github.com/kirodotdev/kiro-mcp
 - https://github.com/kirodotdev/awesome-kiro
 
@@ -623,6 +627,9 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 - https://github.com/grapeot/devin.cursorrules
 - https://github.com/e2b-dev/awesome-ai-agents
 - https://docs.devin.ai/desktop/changelog
+
+### Cursor Mobile
+- [Cursor for iOS](https://apps.apple.com/app/cursor/id6767085653) - Review PRs, demos, screenshots, and logs from your phone
 
 ---
 ### Windsurf Plugins / Codeium
