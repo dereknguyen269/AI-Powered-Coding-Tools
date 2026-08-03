@@ -1,6 +1,6 @@
 # 🚀 AI-Powered Coding Tools: Best Practices & Mastery Guide
 
-> Last reviewed: July 20, 2026. AI coding tools change quickly; verify pricing,
+> Last reviewed: August 3, 2026. AI coding tools change quickly; verify pricing,
 > model availability, and enterprise controls before making production decisions.
 
 <div align="center">
@@ -83,7 +83,7 @@ AI can only produce high-quality results when it understands the **full context*
 ### AI-First Code Editors
 | Tool | Description |
 |-----------|------------|
-| Cursor | AI-first code editor (v3.8+) with strong full-repo context, Bugbot, Design Mode, Canvas, Composer, and Cursor Automations with GitHub/Slack triggers and computer use |
+| Cursor | AI-first code editor with strong full-repo context, improved picker (grouped repos, Run on picker, branch picker), Bugbot, Design Mode, Canvas, Composer, and Cursor Automations with GitHub/Slack triggers and computer use |
 | Devin Desktop | AI-enhanced editor (formerly Windsurf, rebranded June 2026) with Devin Cloud integration, multi-model support (Opus 4.7, GPT-5.5, SWE-1.6), and local/cloud handoff |
 | Zed Editor | High-performance collaborative editor built in Rust with integrated AI assistance |
 | PearAI | Open-source AI-powered code editor |
@@ -95,7 +95,7 @@ AI can only produce high-quality results when it understands the **full context*
 ### CLI-Based Coding Agents
 | Tool | Description |
 |-----------|------------|
-| Claude Code | CLI-based AI coding assistant with Sonnet 4.6/4.7, Opus 4.8, Haiku 4, extended thinking, 1M context window, and model aliases |
+| Claude Code | CLI-based AI coding assistant with Sonnet 5, Opus 5, Fable 5, Haiku 4, extended thinking, 1M context window, and model aliases (best, fable, sonnet, opus, haiku) |
 | GitHub Copilot CLI (`gh copilot`) | Terminal-native agentic development, now generally available |
 | Codex CLI | OpenAI's CLI coding agent with GPT-5.3-Codex and sandboxed code execution |
 | Gemini CLI | Google's open-source terminal coding agent with free Gemini 3 Pro access and 1M token context |
