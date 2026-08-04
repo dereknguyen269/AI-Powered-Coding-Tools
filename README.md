@@ -108,6 +108,8 @@ AI can only produce high-quality results when it understands the **full context*
 | Cascade (JetBrains) | JetBrains' AI coding agent for contextual assistance within IDEs |
 | Wiggum CLI | Open-source agent that scans codebases, generates specs through AI interviews, and runs autonomous coding loops |
 | agx | Checkpoint-based execution engine for AI coding agents with durable Wake→Work→Sleep loops across sessions |
+| Plandex | AI coding agent designed for large, real-world development tasks with multi-file planning and review sandbox |
+| Autohand Code CLI | Self-evolving autonomous coding agent with ReAct pattern, 40+ tools, and modular skills system |
 
 ### IDE-Integrated AI Assistants
 | Tool | Description |
@@ -145,6 +147,10 @@ AI can only produce high-quality results when it understands the **full context*
 | Potpie | AI coding agent for streamlined development workflows |
 | Agent Shadow Brain | AI background code analysis agent that watches codebases and provides real-time insights |
 | OpenMagic | AI-powered coding toolbar injected via reverse proxy, capturing context and applying approved changes |
+| Grok Build (xAI) | 8 parallel agents for code generation with multi-agent "Society of Mind" architecture |
+| DeerFlow | ByteDance's research-focused AI agent, No.1 GitHub Trending Feb 2026 (25K+ stars) |
+| AXME | Durable AI agent coordination with crash recovery, human approval gates, and open protocol (AXP) |
+| Maestro | Open-source desktop command center for running multiple AI coding agents in parallel |
 
 ### App Builders (No-Code/Low-Code)
 | Tool | Description |
@@ -515,6 +521,7 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 - https://github.com/ghuntley/how-to-build-a-coding-agent
 - https://github.com/CyberSecurityUP/Offensive-AI-Agent-Prompts
 - https://github.com/e2b-dev/awesome-ai-agents
+- https://github.com/caramaschiHG/awesome-ai-agents-2026
 - https://github.com/wsxiaoys/awesome-ai-coding
 - https://github.com/business-science/awesome-generative-ai-data-scientist
 - https://github.com/ifokeev/awesome-copilots
@@ -529,6 +536,10 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 - https://github.com/humanloop/awesome-chatgpt
 - https://github.com/sindresorhus/awesome
 - https://github.com/trimstray/the-book-of-secret-knowledge
+- https://github.com/joylarkin/AI-Coding-Landscape
+- https://github.com/duanyytop/agents-radar
+- https://github.com/jim-schwoebel/awesome_ai_agents
+- https://github.com/Jenqyang/Awesome-AI-Agents
 
 ---
 ### Cursor
@@ -585,7 +596,7 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 - https://github.com/vanzan01/claude-code-sub-agent-collective
 
 **Skills:**
-- https://github.com/obra/superpowers
+- https://github.com/obra/superpowers (119K+ stars - fastest rising GitHub project 2026)
 - https://github.com/travisvn/awesome-claude-skills
 - https://github.com/simonw/claude-skills
 - https://github.com/zxkane/aws-skills
@@ -599,6 +610,13 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 - https://github.com/uditgoenka/autoresearch
 - https://github.com/anthropics/model-context-protocol
 - https://github.com/modelcontextprotocol/servers
+- https://github.com/VoltAgent/awesome-agent-skills (1000+ production-ready skills)
+- https://github.com/skillmatic-ai/awesome-agent-skills (comprehensive agent skills collection)
+- https://github.com/h4vzz/awesome-ai-agent-skills (70+ ready-to-use agent skills)
+- https://github.com/heilcheng/awesome-agent-skills (community-curated skills)
+- https://github.com/softaworks/agent-toolkit (skills for development and automation)
+- https://github.com/Prat011/awesome-llm-skills (LLM and AI agent skills)
+- https://github.com/ComposioHQ/awesome-claude-skills (1000+ Claude skills and plugins)
 
 ---
 ### GitHub Copilot
@@ -669,6 +687,30 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 
 ---
 
+### MCP (Model Context Protocol) Ecosystem
+- [Official MCP Servers](https://github.com/modelcontextprotocol/servers) - Reference implementations from MCP steering group
+- [Awesome MCP Servers](https://github.com/appcypher/awesome-mcp-servers) - Comprehensive curated list of MCP servers
+- [Awesome MCP Servers v2](https://github.com/patriksimek/awesome-mcp-servers-2) - Production-ready MCP servers
+- [MCP Registry](https://modelcontextprotocol.io/registry) - Browse published MCP servers
+- [Awesome MCP Clients](https://github.com/punkpeye/awesome-mcp-clients) - MCP-compatible AI clients and tools
+- [Context7](https://context7.com) - MCP server providing up-to-date library documentation
+
+---
+
+### ACP (Agent Client Protocol)
+ACP is an open protocol that defines how IDEs and AI coding agents communicate — the "LSP moment for AI coding agents."
+
+- [ACP Official Site](https://www.jetbrains.com/acp) - Official documentation and registry
+- [OpenACP](https://github.com/Open-ACP/OpenACP) - Bridge AI agents (Claude Code, Codex, Gemini, Cursor) to Telegram, Discord & Slack
+- [Awesome CLI Coding Agents](https://github.com/bradAGI/awesome-cli-coding-agents) - Comprehensive list of CLI coding agents with ACP support
+- [acepe](https://github.com/flazouh/acepe) - Agentic Developer Environment to orchestrate Claude Code, Codex, Copilot, Cursor, Opencode
+- [claude-code-cli-acp](https://github.com/moabualruz/claude-code-cli-acp) - ACP adapter for Claude Code CLI with Zed support
+
+**ACP-Compatible Agents:**
+- Claude Code, GitHub Copilot, Codex, Cursor, Gemini CLI, OpenCode, Windsurf, Mistral Vibe, Kimi CLI, Qwen Code, Junie (JetBrains)
+
+---
+
 ## Learning Resources
 
 Articles, guides, and references for learning AI-assisted development.
@@ -682,10 +724,15 @@ Articles, guides, and references for learning AI-assisted development.
 - [LLM Course](https://github.com/mlabonne/llm-course)
 - [Awesome LLM](https://github.com/Hannibal046/Awesome-LLM)
 - [Awesome AI Agents](https://github.com/e2b-dev/awesome-ai-agents)
+- [Awesome AI Agents 2026](https://github.com/caramaschiHG/awesome-ai-agents-2026) - Trending AI agents collection
 - [OpenHands](https://github.com/All-Hands-AI/OpenHands)
 - [Continue Dev](https://github.com/continuedev/continue)
 - [Aider](https://github.com/Aider-AI/aider)
 - [SWE-agent](https://github.com/princeton-nlp/SWE-agent)
+- [AI Coding Landscape](https://github.com/joylarkin/AI-Coding-Landscape) - Comprehensive AI coding models, agents, and tools
+- [Awesome OpenClaw Skills](https://github.com/VoltAgent/awesome-openclaw-skills) - Skills for OpenClaw autonomous agents
+- [Awesome Agent Skills](https://github.com/skillmatic-ai/awesome-agent-skills) - Definitive resource for Agent Skills
+- [Agents Radar](https://github.com/duanyytop/agents-radar) - Track AI open source trends
 
 ---
 
