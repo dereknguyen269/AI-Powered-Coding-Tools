@@ -697,6 +697,20 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 
 ---
 
+### ACP (Agent Client Protocol)
+ACP is an open protocol that defines how IDEs and AI coding agents communicate — the "LSP moment for AI coding agents."
+
+- [ACP Official Site](https://www.jetbrains.com/acp) - Official documentation and registry
+- [OpenACP](https://github.com/Open-ACP/OpenACP) - Bridge AI agents (Claude Code, Codex, Gemini, Cursor) to Telegram, Discord & Slack
+- [Awesome CLI Coding Agents](https://github.com/bradAGI/awesome-cli-coding-agents) - Comprehensive list of CLI coding agents with ACP support
+- [acepe](https://github.com/flazouh/acepe) - Agentic Developer Environment to orchestrate Claude Code, Codex, Copilot, Cursor, Opencode
+- [claude-code-cli-acp](https://github.com/moabualruz/claude-code-cli-acp) - ACP adapter for Claude Code CLI with Zed support
+
+**ACP-Compatible Agents:**
+- Claude Code, GitHub Copilot, Codex, Cursor, Gemini CLI, OpenCode, Windsurf, Mistral Vibe, Kimi CLI, Qwen Code, Junie (JetBrains)
+
+---
+
 ## Learning Resources
 
 Articles, guides, and references for learning AI-assisted development.
