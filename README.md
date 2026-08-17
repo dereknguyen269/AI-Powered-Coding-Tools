@@ -1,6 +1,6 @@
 # 🚀 AI-Powered Coding Tools: Best Practices & Mastery Guide
 
-> Last reviewed: August 10, 2026. AI coding tools change quickly; verify pricing,
+> Last reviewed: August 17, 2026. AI coding tools change quickly; verify pricing,
 > model availability, and enterprise controls before making production decisions.
 
 <div align="center">
@@ -83,8 +83,8 @@ AI can only produce high-quality results when it understands the **full context*
 ### AI-First Code Editors
 | Tool | Description |
 |-----------|------------|
-| Cursor | AI-first code editor with strong full-repo context, improved picker (grouped repos, Run on picker, branch picker), Bugbot, Design Mode, Canvas, Composer with nested subagents, Cursor Router for Auto mode, iPad app, Google Workspace plugins (Gmail/Drive/Calendar), and Cursor Automations with GitHub/Slack triggers and computer use |
-| Devin Desktop | AI-enhanced editor (formerly Windsurf, rebranded June 2026) with Devin Cloud integration, multi-model support (GPT-5.6, Opus 4.7, SWE-1.6), Fast/Ultra/Fusion modes, subagents (preview), refreshed UI, and local/cloud handoff |
+| Cursor | AI-first code editor with strong full-repo context, improved picker (grouped repos, Run on picker, branch picker), Bugbot, Design Mode, Canvas, Composer with nested subagents, Cursor Router for Auto mode, iPad app, Google Workspace plugins (Gmail/Drive/Calendar), Cursor Automations with GitHub/Slack triggers and computer use, and Cloud Agent Builds for fast, resilient agent starts |
+| Devin Desktop | AI-enhanced editor (formerly Windsurf, rebranded June 2026) with Devin Cloud integration, multi-model support (GPT-5.6, Opus 4.7, SWE-1.6), Fast/Ultra/Fusion modes, subagents (preview), refreshed UI, local/cloud handoff, shareable sanitized Devin Local conversations, and a unified Customizations panel |
 | Zed Editor | High-performance collaborative editor built in Rust with integrated AI assistance |
 | PearAI | Open-source AI-powered code editor |
 | Aide | Open-source AI-native IDE with proactive agents, built on VS Code |
@@ -95,7 +95,7 @@ AI can only produce high-quality results when it understands the **full context*
 ### CLI-Based Coding Agents
 | Tool | Description |
 |-----------|------------|
-| Claude Code | CLI-based AI coding assistant with Sonnet 5, Opus 5, Fable 5, Haiku 4, extended thinking, 1M context window, and model aliases (best, fable, sonnet, opus, haiku) |
+| Claude Code | CLI-based AI coding assistant with Sonnet 5, Opus 5, Fable 5, Haiku 4, extended thinking, 1M context window, and model aliases (default, best, fable, sonnet, opus, haiku, sonnet[1m], opus[1m], opusplan) |
 | GitHub Copilot CLI (`gh copilot`) | Terminal-native agentic development, now generally available |
 | Codex CLI | OpenAI's CLI coding agent with GPT-5.3-Codex and sandboxed code execution |
 | Gemini CLI | Google's open-source terminal coding agent with free Gemini 3 Pro access and 1M token context |
@@ -110,6 +110,7 @@ AI can only produce high-quality results when it understands the **full context*
 | agx | Checkpoint-based execution engine for AI coding agents with durable Wake→Work→Sleep loops across sessions |
 | Plandex | AI coding agent designed for large, real-world development tasks with multi-file planning and review sandbox |
 | Autohand Code CLI | Self-evolving autonomous coding agent with ReAct pattern, 40+ tools, and modular skills system |
+| Warp | AI-enhanced terminal with smart command suggestions, agent mode, and collaborative workflows |
 
 ### IDE-Integrated AI Assistants
 | Tool | Description |
@@ -125,6 +126,7 @@ AI can only produce high-quality results when it understands the **full context*
 | Continue | Open-source, pluggable AI code completion for VS Code and JetBrains |
 | Blackbox AI | AI coding assistant with code completions, chat, and search across the web and codebase |
 | Phind | AI search and coding assistant for instant answers and code solutions |
+| StackSpot AI | Enterprise-focused AI platform for code generation and developer efficiency |
 
 ### Autonomous Coding Agents
 | Tool | Description |
@@ -184,6 +186,7 @@ AI can only produce high-quality results when it understands the **full context*
 | Supermaven | Ultra-fast completions with 1M token context window |
 | Continue | Open-source, pluggable AI code completion for VS Code and JetBrains |
 | Visual Studio IntelliCode | Microsoft's AI code completion for Visual Studio |
+| CodeGeeX | Open-source multilingual code generation model for inline completion |
 
 ### Code Review & Quality
 | Tool | Description |
@@ -216,14 +219,14 @@ AI can only produce high-quality results when it understands the **full context*
 
 ## 🚀 2026 AI Development Resources
 
-### **🗓️ Current Snapshot - August 2026**
+### **🗓️ Current Snapshot - August 2026** (updated August 17, 2026)
 Use this section as the starting point for weekly maintenance:
 
 | Area | What changed | Source to monitor |
 |------|--------------|------------------|
-| Cursor | Cursor Router powers Auto mode with Balance and Intelligence optimization modes (admin controls, model allow/block lists, Grok 4.5 as a price-efficient routing option). Cursor Start entry tier with monthly auto-renewal. Cursor for iPad on all paid plans with full PR review and Inbox. Google Workspace plugins give agents Gmail, Google Drive, and Calendar access. Cursor in Slack now shares a plan before starting, supports multi-repo environments, and works across channels/threads. Composer 2.5 with nested subagents, faster Bugbot, Design Mode, Canvas, and Context Usage Report remain. Enterprise Organizations GA. | [Cursor changelog](https://cursor.com/changelog) |
-| Devin Desktop (formerly Windsurf) | v3.6.27 (Aug 1, 2026). Unified OS notifications, codemaps in own editor tabs, refreshed agent window UI (Inter font, rounded session tabs with state/PR icons), Devin mode badges (Fast, Ultra, Fusion), GPT-5.6 variants marked "Devin Local only". Devin Local Plan mode with persistent Markdown plan files, worktree Merge button, subagents (preview), editable command approvals. Base IDE updated to VS Code 1.126. | [Devin Desktop changelog](https://docs.devin.ai/desktop/changelog) |
-| Claude Code | Opus 5 now the latest Opus model (the `opus` alias resolves to Opus 5 on Anthropic API / Claude Platform on AWS, Opus 4.6 on Foundry); `sonnet` resolves to Sonnet 5. Fable 5 remains the most capable model for tasks larger than a single sitting, selected via `best`/`fable`. Model aliases: best, fable, sonnet, opus, haiku. 1M context window for extended sessions. Fast mode available for quick tasks. | [Claude Code model config](https://code.claude.com/docs/en/model-config) |
+| Cursor | Cloud Agent Builds (Aug 13) let agents boot into a ready-to-use environment that Cursor prepares in the background — 10x faster boots and 3x faster time to first token, with the last successful build used when a new one breaks. Google Workspace plugins (Aug 3) add Gmail, Google Drive, and Calendar access from the Cursor Marketplace. Cursor for iPad (Jul 29) is now on all paid plans with an Inbox and full-PR review. Cursor Start (Jul 28) is a ₹649/month India plan. Cursor Router (Jul 22) powers Auto mode with Cost/Balance/Intelligence optimization, admin controls, and Grok 4.5 as a price-efficient routing option. Composer 2.5 with nested subagents, Bugbot, Design Mode, Canvas, and Enterprise Organizations GA remain. | [Cursor changelog](https://cursor.com/changelog) |
+| Devin Desktop (formerly Windsurf) | v3.7.25 (Aug 13): faster sidebar for users with thousands of cached sessions; Devin Local MCP auth fixes. v3.7.16 (Aug 10): shareable sanitized Devin Local conversations (secrets redacted, paths normalized), reliable mid-turn revert, unified Customizations panel with a Subagents section, predictable permission-rule composition, queued-message editing, and a polished Agent Command Center. v3.7.16 also renames the old "Plugins" section to "Extensions". Base IDE remains VS Code 1.126. | [Devin Desktop changelog](https://docs.devin.ai/desktop/changelog) |
+| Claude Code | `opus` now resolves to Opus 5 (Anthropic API / Claude Platform on AWS; requires v2.1.219+) and `sonnet` to Sonnet 5 (v2.1.197+). New `default` alias clears model overrides; `best` uses Fable 5 where available else the latest Opus; `sonnet[1m]` and `opus[1m]` select 1M-token windows; `opusplan` uses Opus in plan mode then Sonnet for execution. Fable 5 remains the most capable model for tasks larger than a single sitting. 1M context window, fast mode, and auto-compaction settings available. | [Claude Code model config](https://code.claude.com/docs/en/model-config) |
 | GitHub Copilot CLI | `gh copilot` is now generally available for Copilot subscribers. Old `github/gh-copilot` extension is deprecated. | [GitHub Copilot CLI GA](https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/) |
 | Codex | GPT-5.3-Codex available with paid ChatGPT plans across app, CLI, IDE extension, and web. | [OpenAI Codex](https://en.wikipedia.org/wiki/OpenAI_Codex) |
 | Kiro | AWS's agentic IDE with spec-driven development, property-based tests, and cloud sandboxes. "Crew" open-source workspace, ChatGPT model support, and Auto mode that picks the best model per task by complexity/latency/cost. ACP-compatible, supports AGENTS.md, Skills.md, and MCP. Available as IDE, CLI, Web, and Mobile. GitLab/GitHub integration. Pro Max tier at $100/month with 5,000 credits. Based on Code OSS with VS Code settings import. | [Kiro](https://kiro.dev/) |
@@ -311,9 +314,9 @@ Comprehensive analysis of leading AI development tools:
 #### **IDE-Integrated AI Assistants**
 | Tool | Context Model | Integration Depth | Unique Features |
 |------|---------------|------------------|----------------|
-| **Cursor** | Repository and agent-worktree oriented | Deep IDE and agent integration | Agents Window, parallel agents, Design Mode, `/worktree`, `/best-of-n`, Bugbot, Canvas, Cursor Router, iPad, Google Workspace plugins |
+| **Cursor** | Repository and agent-worktree oriented | Deep IDE and agent integration | Agents Window, parallel agents, Design Mode, `/worktree`, `/best-of-n`, Bugbot, Canvas, Cursor Router, iPad, Google Workspace plugins, Cloud Agent Builds |
 | **GitHub Copilot Agent Mode / CLI** | Repository, PRs, terminal sessions, GitHub context | GitHub ecosystem | Plan mode, autopilot, MCP, plugins, skills, remote delegation |
-| **Devin Desktop (formerly Windsurf)** | Editor, Cascade, terminal, and local/cloud agent handoff | Agentic IDE and terminal workflows | Devin for Terminal, Devin Local, multi-model access (GPT-5.6), subagents (preview), Adaptive model router, Agent Command Center, VS Code 1.126 base |
+| **Devin Desktop (formerly Windsurf)** | Editor, Cascade, terminal, and local/cloud agent handoff | Agentic IDE and terminal workflows | Devin for Terminal, Devin Local, multi-model access (GPT-5.6), subagents (preview), Adaptive model router, Agent Command Center, shareable local conversations, VS Code 1.126 base |
 | **Kiro** | Specs, tasks, hooks, and codebase context | IDE, CLI, and web | Spec-driven development, agent hooks, production-oriented planning, TDD support |
 
 #### **CLI and Automation Tools**
