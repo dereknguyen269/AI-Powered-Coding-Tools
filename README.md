@@ -1,6 +1,6 @@
 # 🚀 AI-Powered Coding Tools: Best Practices & Mastery Guide
 
-> Last reviewed: August 17, 2026. AI coding tools change quickly; verify pricing,
+> Last reviewed: August 24, 2026. AI coding tools change quickly; verify pricing,
 > model availability, and enterprise controls before making production decisions.
 
 <div align="center">
@@ -83,8 +83,8 @@ AI can only produce high-quality results when it understands the **full context*
 ### AI-First Code Editors
 | Tool | Description |
 |-----------|------------|
-| Cursor | AI-first code editor with strong full-repo context, improved picker (grouped repos, Run on picker, branch picker), Bugbot, Design Mode, Canvas, Composer with nested subagents, Cursor Router for Auto mode, iPad app, Google Workspace plugins (Gmail/Drive/Calendar), Cursor Automations with GitHub/Slack triggers and computer use, and Cloud Agent Builds for fast, resilient agent starts |
-| Devin Desktop | AI-enhanced editor (formerly Windsurf, rebranded June 2026) with Devin Cloud integration, multi-model support (GPT-5.6, Opus 4.7, SWE-1.6), Fast/Ultra/Fusion modes, subagents (preview), refreshed UI, local/cloud handoff, shareable sanitized Devin Local conversations, and a unified Customizations panel |
+| Cursor | AI-first code editor with strong full-repo context, improved picker (grouped repos, Run on picker, branch picker), Bugbot, Design Mode, Canvas, Composer with nested subagents, Cursor Router for Auto mode, iPad app, Google Workspace plugins (Gmail/Drive/Calendar), Cursor Automations with GitHub/Slack triggers and computer use, Cloud Agent Builds for fast resilient agent starts, Origin code hosting (early beta) with GitHub sync and PRs, Subscriptions for event-driven cloud agents, Custom modes from skills, subagents on isolated VMs, /goal long-lived objectives, and mid-run steering |
+| Devin Desktop | AI-enhanced editor (formerly Windsurf, rebranded June 2026) with Devin Cloud integration, multi-model support (GPT-5.6, Opus 4.7, SWE-1.6), Fast/Ultra/Fusion modes, subagents (preview), refreshed UI, local/cloud handoff, shareable sanitized Devin Local conversations, a unified Customizations panel, and an Agent Command Center that follows the selected space with side-by-side agent windows and Markdown plan mode |
 | Zed Editor | High-performance collaborative editor built in Rust with integrated AI assistance |
 | PearAI | Open-source AI-powered code editor |
 | Aide | Open-source AI-native IDE with proactive agents, built on VS Code |
@@ -111,6 +111,9 @@ AI can only produce high-quality results when it understands the **full context*
 | Plandex | AI coding agent designed for large, real-world development tasks with multi-file planning and review sandbox |
 | Autohand Code CLI | Self-evolving autonomous coding agent with ReAct pattern, 40+ tools, and modular skills system |
 | Warp | AI-enhanced terminal with smart command suggestions, agent mode, and collaborative workflows |
+| Task Master | AI task management for agentic coding workflows; turns PRDs into sequenced tasks for Cursor, Claude Code, and other agents |
+| TmuxAI | AI-powered terminal assistant that runs alongside tmux panes to execute and explain commands |
+| Amazon Q Developer CLI | AWS's agentic CLI for the terminal with chat-driven coding, shell, and AWS workflows |
 
 ### IDE-Integrated AI Assistants
 | Tool | Description |
@@ -214,22 +217,24 @@ AI can only produce high-quality results when it understands the **full context*
 | Context7 | MCP server providing up-to-date library documentation to LLMs and AI editors |
 | PraisonAI | Multi-agent framework with 100+ LLM support and MCP integration |
 | Open Interpreter | Open-source agent that runs code locally in response to natural language |
+| OpenRouter | Unified API gateway routing to hundreds of LLMs; powers multi-model support in tools like Kilo Code and OpenCode |
+| SpecStory | Captures AI coding chat history (Cursor, Copilot, Claude Code) as searchable, shareable markdown specs |
 
 ---
 
 ## 🚀 2026 AI Development Resources
 
-### **🗓️ Current Snapshot - August 2026** (updated August 17, 2026)
+### **🗓️ Current Snapshot - August 2026** (updated August 24, 2026)
 Use this section as the starting point for weekly maintenance:
 
 | Area | What changed | Source to monitor |
 |------|--------------|------------------|
-| Cursor | Cloud Agent Builds (Aug 13) let agents boot into a ready-to-use environment that Cursor prepares in the background — 10x faster boots and 3x faster time to first token, with the last successful build used when a new one breaks. Google Workspace plugins (Aug 3) add Gmail, Google Drive, and Calendar access from the Cursor Marketplace. Cursor for iPad (Jul 29) is now on all paid plans with an Inbox and full-PR review. Cursor Start (Jul 28) is a ₹649/month India plan. Cursor Router (Jul 22) powers Auto mode with Cost/Balance/Intelligence optimization, admin controls, and Grok 4.5 as a price-efficient routing option. Composer 2.5 with nested subagents, Bugbot, Design Mode, Canvas, and Enterprise Organizations GA remain. | [Cursor changelog](https://cursor.com/changelog) |
-| Devin Desktop (formerly Windsurf) | v3.7.25 (Aug 13): faster sidebar for users with thousands of cached sessions; Devin Local MCP auth fixes. v3.7.16 (Aug 10): shareable sanitized Devin Local conversations (secrets redacted, paths normalized), reliable mid-turn revert, unified Customizations panel with a Subagents section, predictable permission-rule composition, queued-message editing, and a polished Agent Command Center. v3.7.16 also renames the old "Plugins" section to "Extensions". Base IDE remains VS Code 1.126. | [Devin Desktop changelog](https://docs.devin.ai/desktop/changelog) |
-| Claude Code | `opus` now resolves to Opus 5 (Anthropic API / Claude Platform on AWS; requires v2.1.219+) and `sonnet` to Sonnet 5 (v2.1.197+). New `default` alias clears model overrides; `best` uses Fable 5 where available else the latest Opus; `sonnet[1m]` and `opus[1m]` select 1M-token windows; `opusplan` uses Opus in plan mode then Sonnet for execution. Fable 5 remains the most capable model for tasks larger than a single sitting. 1M context window, fast mode, and auto-compaction settings available. | [Claude Code model config](https://code.claude.com/docs/en/model-config) |
+| Cursor | Subscriptions (Aug 19) let cloud agents monitor PRs, Slack threads, or scheduled tasks and wake when something happens — agents automatically subscribe to PRs they create and drive them to completion. Also in Aug 19: Custom modes (pin any skill as an always-on mode), subagents running on their own isolated VMs, the `/goal` command for long-lived objectives, and mid-run steering. Origin code hosting (Aug 17, early beta on all paid plans) lets Cursor host repos with pull requests, real-time GitHub sync, and app extensions for Vercel, Depot, and Buildkite. Cloud Agent Builds (Aug 13) boot agents into ready-to-use environments — 10x faster boots and 3x faster time to first token. Google Workspace plugins (Aug 3), Cursor for iPad on all paid plans (Jul 29), Cursor Start India plan (Jul 28), and Cursor Router for Auto mode (Jul 22) remain. | [Cursor changelog](https://cursor.com/changelog) |
+| Devin Desktop (formerly Windsurf) | v3.8.20 (Aug 21): Agent Command Center now follows whichever space is selected, converts editor windows in place without reload, and supports any number of agent windows side by side (new `devin.agentWindow.location` setting). Devin Local gains a full Markdown plan file with an explicit Implement button, individually stoppable subagents, and multi-root workspace support. Devin Cloud streams live shell output into sessions and adds sidebar filtering/sorting. Windows updates now install only after explicitly clicking Restart to Update. v3.7.25 (Aug 13) and v3.7.16 (Aug 10) added shareable sanitized Devin Local conversations, reliable mid-turn revert, and the unified Customizations panel. | [Devin Desktop changelog](https://docs.devin.ai/desktop/changelog) |
+| Claude Code | `opus` now resolves to Opus 5 on the Anthropic API (requires v2.1.219+) and `sonnet` to Sonnet 5 (v2.1.197+); alias resolution is provider-dependent (e.g. Sonnet 4.6 on Claude Platform on AWS, Sonnet 4.5 on Bedrock/Google Cloud, Opus 4.6 on Microsoft Foundry). `default` clears model overrides; `best` uses Fable 5 where available else the latest Opus; `sonnet[1m]`/`opus[1m]` select 1M-token windows; `opusplan` uses Opus in plan mode then Sonnet for execution. Fable 5 remains the most capable model for tasks larger than a single sitting and may bill to usage credits with an interactive consent prompt. | [Claude Code model config](https://code.claude.com/docs/en/model-config) |
 | GitHub Copilot CLI | `gh copilot` is now generally available for Copilot subscribers. Old `github/gh-copilot` extension is deprecated. | [GitHub Copilot CLI GA](https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/) |
 | Codex | GPT-5.3-Codex available with paid ChatGPT plans across app, CLI, IDE extension, and web. | [OpenAI Codex](https://en.wikipedia.org/wiki/OpenAI_Codex) |
-| Kiro | AWS's agentic IDE with spec-driven development, property-based tests, and cloud sandboxes. "Crew" open-source workspace, ChatGPT model support, and Auto mode that picks the best model per task by complexity/latency/cost. ACP-compatible, supports AGENTS.md, Skills.md, and MCP. Available as IDE, CLI, Web, and Mobile. GitLab/GitHub integration. Pro Max tier at $100/month with 5,000 credits. Based on Code OSS with VS Code settings import. | [Kiro](https://kiro.dev/) |
+| Kiro | AWS's agentic IDE, now positioned around "agentic engineering": spec-driven development, automated reasoning checks on requirements, property-based tests, parallel agents, and cloud sessions in IDE and CLI. "Crew" open-source development workspace, headless CLI for CI/CD PR review and bug fixing, ChatGPT model support, and Auto mode that picks the best model per task by complexity/latency/cost. ACP-compatible, supports AGENTS.md, Skills.md, and MCP. Available as IDE, CLI, Web, and Mobile. GitLab/GitHub integration. Pro Max tier at $100/month with 5,000 credits. Based on Code OSS with VS Code settings import. | [Kiro](https://kiro.dev/) |
 | Qodo | Qodo is the current name to track for CodiumAI-style code review, testing, and quality workflows. Open-source PR Agent available. | [Qodo](https://www.qodo.ai/) |
 
 ### **📊 AI Coding Trends 2026**
@@ -549,7 +554,7 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 
 ---
 ### Cursor
-- [Cursor Changelog](https://cursor.com/changelog) - Latest updates including Cursor Router, iPad app, Google Workspace plugins, and Cursor Automations
+- [Cursor Changelog](https://cursor.com/changelog) - Latest updates including Origin code hosting, Subscriptions for cloud agents, Custom modes, Cursor Router, iPad app, and Cursor Automations
 - https://github.com/PatrickJS/awesome-cursorrules
 - https://github.com/grapeot/devin.cursorrules
 - https://github.com/sanjeed5/awesome-cursor-rules-mdc
