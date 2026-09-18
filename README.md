@@ -1,6 +1,6 @@
 # 🚀 AI-Powered Coding Tools: Best Practices & Mastery Guide
 
-> Last reviewed: August 24, 2026. AI coding tools change quickly; verify pricing,
+|> Last reviewed: September 18, 2026. AI coding tools change quickly; verify pricing,
 > model availability, and enterprise controls before making production decisions.
 
 <div align="center">
@@ -229,8 +229,8 @@ Use this section as the starting point for weekly maintenance:
 
 | Area | What changed | Source to monitor |
 |------|--------------|------------------|
-| Cursor | Subscriptions (Aug 19) let cloud agents monitor PRs, Slack threads, or scheduled tasks and wake when something happens — agents automatically subscribe to PRs they create and drive them to completion. Also in Aug 19: Custom modes (pin any skill as an always-on mode), subagents running on their own isolated VMs, the `/goal` command for long-lived objectives, and mid-run steering. Origin code hosting (Aug 17, early beta on all paid plans) lets Cursor host repos with pull requests, real-time GitHub sync, and app extensions for Vercel, Depot, and Buildkite. Cloud Agent Builds (Aug 13) boot agents into ready-to-use environments — 10x faster boots and 3x faster time to first token. Google Workspace plugins (Aug 3), Cursor for iPad on all paid plans (Jul 29), Cursor Start India plan (Jul 28), and Cursor Router for Auto mode (Jul 22) remain. | [Cursor changelog](https://cursor.com/changelog) |
-| Devin Desktop (formerly Windsurf) | v3.8.20 (Aug 21): Agent Command Center now follows whichever space is selected, converts editor windows in place without reload, and supports any number of agent windows side by side (new `devin.agentWindow.location` setting). Devin Local gains a full Markdown plan file with an explicit Implement button, individually stoppable subagents, and multi-root workspace support. Devin Cloud streams live shell output into sessions and adds sidebar filtering/sorting. Windows updates now install only after explicitly clicking Restart to Update. v3.7.25 (Aug 13) and v3.7.16 (Aug 10) added shareable sanitized Devin Local conversations, reliable mid-turn revert, and the unified Customizations panel. | [Devin Desktop changelog](https://docs.devin.ai/desktop/changelog) |
+| Cursor | **Projects** (Sep 10): coordinator agent plans work, delegates to subagents, maintains shared context across months. Cloud agents run on their own computer; closing laptop doesn't stop it. **Subscriptions** let agents watch Slack/PRs and wake on signals. **Self-hosted machines** (Sep 2): keep codebase, builds, secrets on internal infra; dynamic pool scheduling, cloud agents on AWS Lambda/Coder/Cloudflare/Daytono/Modal/E2B, computer use on Linux/Mac. **Origin** (Aug 17, early beta all paid plans): code hosting with PRs, GitHub sync, Vercel/Depot/Buildkite app extensions. Cloud Agent Builds (Aug 13), Custom modes, subagents on isolated VMs, `/goal`, mid-run steering, Cursor Router for Auto mode, iPad app, Google Workspace plugins remain. | [Cursor changelog](https://cursor.com/changelog) |
+| Devin Desktop (formerly Windsurf) | v3.10.31 (Sep 16): Restricted Mode blocks nested-object workspace settings (CVE-2026-81376); recent sessions restore transcript instantly. v3.10.27 (Sep 15): drag files onto agent panel, remote SSH sessions reconnect without lock error, Devin Fusion activates without Fable 5.1 as lead model. v3.10.23 (Sep 10): **remote agent hosts** via SSH with saved hosts and status dots; local sessions deletable; faster startup; ACP always-on (Enable ACP toggle removed); MCP authorization opens provider directly; legacy Cascade entry points removed; files Devin edits count toward LOC analytics. Devin Cloud: network access allowlist cards, archive with open PRs closes them, image preview carousel, outage message queuing. | [Devin Desktop changelog](https://docs.devin.ai/desktop/changelog) |
 | Claude Code | `opus` now resolves to Opus 5 on the Anthropic API (requires v2.1.219+) and `sonnet` to Sonnet 5 (v2.1.197+); alias resolution is provider-dependent (e.g. Sonnet 4.6 on Claude Platform on AWS, Sonnet 4.5 on Bedrock/Google Cloud, Opus 4.6 on Microsoft Foundry). `default` clears model overrides; `best` uses Fable 5 where available else the latest Opus; `sonnet[1m]`/`opus[1m]` select 1M-token windows; `opusplan` uses Opus in plan mode then Sonnet for execution. Fable 5 remains the most capable model for tasks larger than a single sitting and may bill to usage credits with an interactive consent prompt. | [Claude Code model config](https://code.claude.com/docs/en/model-config) |
 | GitHub Copilot CLI | `gh copilot` is now generally available for Copilot subscribers. Old `github/gh-copilot` extension is deprecated. | [GitHub Copilot CLI GA](https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/) |
 | Codex | GPT-5.3-Codex available with paid ChatGPT plans across app, CLI, IDE extension, and web. | [OpenAI Codex](https://en.wikipedia.org/wiki/OpenAI_Codex) |
@@ -553,12 +553,14 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 - https://github.com/Jenqyang/Awesome-AI-Agents
 
 ---
-### Cursor
-- [Cursor Changelog](https://cursor.com/changelog) - Latest updates including Origin code hosting, Subscriptions for cloud agents, Custom modes, Cursor Router, iPad app, and Cursor Automations
+### Cursor (Sep 2026)
+- [Cursor Changelog](https://cursor.com/changelog) — Projects, self-hosted machines, subscriptions, Origin code hosting
 - https://github.com/PatrickJS/awesome-cursorrules
 - https://github.com/grapeot/devin.cursorrules
 - https://github.com/sanjeed5/awesome-cursor-rules-mdc
 - https://github.com/kleneway/awesome-cursor-mpc-server
+
+---
 
 
 ---
@@ -745,6 +747,9 @@ Articles, guides, and references for learning AI-assisted development.
 - [Awesome OpenClaw Skills](https://github.com/VoltAgent/awesome-openclaw-skills) - Skills for OpenClaw autonomous agents
 - [Awesome Agent Skills](https://github.com/skillmatic-ai/awesome-agent-skills) - Definitive resource for Agent Skills
 - [Agents Radar](https://github.com/duanyytop/agents-radar) - Track AI open source trends
+- [Best AI Coding Tools Compared (Sep 2026)](https://aiweekly.co/learning-ai/generative-ai/best-ai-coding-tools-compared) - Pricing, categories, free tiers
+- [Awesome CLI Coding Agents](https://github.com/bradAGI/awesome-cli-coding-agents) - CLI agents with ACP support
+- [Awesome MCP Servers v2](https://github.com/patriksimek/awesome-mcp-servers-2) - Production-ready MCP servers
 
 ---
 
