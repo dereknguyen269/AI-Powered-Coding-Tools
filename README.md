@@ -1,6 +1,6 @@
 # 🚀 AI-Powered Coding Tools: Best Practices & Mastery Guide
 
-|> Last reviewed: September 18, 2026. AI coding tools change quickly; verify pricing,
+|> Last reviewed: September 26, 2026. AI coding tools change quickly; verify pricing,
 > model availability, and enterprise controls before making production decisions.
 
 <div align="center">
@@ -83,8 +83,8 @@ AI can only produce high-quality results when it understands the **full context*
 ### AI-First Code Editors
 | Tool | Description |
 |-----------|------------|
-| Cursor | AI-first code editor with strong full-repo context, improved picker (grouped repos, Run on picker, branch picker), Bugbot, Design Mode, Canvas, Composer with nested subagents, Cursor Router for Auto mode, iPad app, Google Workspace plugins (Gmail/Drive/Calendar), Cursor Automations with GitHub/Slack triggers and computer use, Cloud Agent Builds for fast resilient agent starts, Origin code hosting (early beta) with GitHub sync and PRs, Subscriptions for event-driven cloud agents, Custom modes from skills, subagents on isolated VMs, /goal long-lived objectives, and mid-run steering |
-| Devin Desktop | AI-enhanced editor (formerly Windsurf, rebranded June 2026) with Devin Cloud integration, multi-model support (GPT-5.6, Opus 4.7, SWE-1.6), Fast/Ultra/Fusion modes, subagents (preview), refreshed UI, local/cloud handoff, shareable sanitized Devin Local conversations, a unified Customizations panel, and an Agent Command Center that follows the selected space with side-by-side agent windows and Markdown plan mode |
+| Cursor | AI-first code editor with strong full-repo context, improved picker (grouped repos, Run on picker, branch picker), Bugbot, Design Mode, Canvas, Composer with nested subagents, Cursor Router for Auto mode, iPad app, Google Workspace plugins (Gmail/Drive/Calendar), Cursor Automations with GitHub/Slack triggers and computer use, Cloud Agent Builds for fast resilient agent starts, Origin code hosting (early beta) with GitHub sync and PRs, Subscriptions for event-driven cloud agents, Projects with a coordinator agent delegating to subagents, Custom modes from skills, subagents on isolated VMs, /goal long-lived objectives, mid-run steering, and the Rollouts (deploy health) and Security Review (exploitable-bug) PR bots |
+| Devin Desktop | AI-enhanced editor (formerly Windsurf, rebranded June 2026) with Devin Cloud integration, multi-model support (GPT-5.6, Opus 4.7, SWE-1.6), Fast/Ultra/Fusion modes, subagents (preview), refreshed UI, local/cloud handoff, shareable sanitized Devin Local conversations, a unified Customizations panel, remote agent hosts over SSH, and an Agent Command Center that follows the selected space with side-by-side agent windows and Markdown plan mode. Cascade has been removed; Devin Local is the only bundled agent |
 | Zed Editor | High-performance collaborative editor built in Rust with integrated AI assistance |
 | PearAI | Open-source AI-powered code editor |
 | Aide | Open-source AI-native IDE with proactive agents, built on VS Code |
@@ -95,7 +95,7 @@ AI can only produce high-quality results when it understands the **full context*
 ### CLI-Based Coding Agents
 | Tool | Description |
 |-----------|------------|
-| Claude Code | CLI-based AI coding assistant with Sonnet 5, Opus 5, Fable 5, Haiku 4, extended thinking, 1M context window, and model aliases (default, best, fable, sonnet, opus, haiku, sonnet[1m], opus[1m], opusplan) |
+| Claude Code | CLI-based AI coding assistant with Opus 5.5, Sonnet 5, Fable 5.1, Haiku 4, extended thinking, 1M context window, and model aliases (default, best, fable, sonnet, opus, haiku, sonnet[1m], opus[1m], opusplan) |
 | GitHub Copilot CLI (`gh copilot`) | Terminal-native agentic development, now generally available |
 | Codex CLI | OpenAI's CLI coding agent with GPT-5.3-Codex and sandboxed code execution |
 | Gemini CLI | Google's open-source terminal coding agent with free Gemini 3 Pro access and 1M token context |
@@ -110,6 +110,17 @@ AI can only produce high-quality results when it understands the **full context*
 | agx | Checkpoint-based execution engine for AI coding agents with durable Wake→Work→Sleep loops across sessions |
 | Plandex | AI coding agent designed for large, real-world development tasks with multi-file planning and review sandbox |
 | Autohand Code CLI | Self-evolving autonomous coding agent with ReAct pattern, 40+ tools, and modular skills system |
+| agentty | Native C++26 terminal coding agent and drop-in Claude Code alternative: single static binary, sub-millisecond cold start, sandboxed by default, model-agnostic (Claude, OpenAI, Groq, OpenRouter, Ollama), ACP support in Zed, and SSH to air-gapped hosts (MIT) |
+| VibePod | Unified CLI for running Claude Code, Codex, OpenCode, Pi, and other agents in isolated Docker/Podman containers, with local metrics and an analytics dashboard |
+| DvalinCode | Provider-neutral, local-first CLI coding agent (Chat/Cowork/Code modes) built for governance: org policy engine, enforced network egress, and a hash-chained audit trail; works with any OpenAI-compatible endpoint (MIT) |
+| Atomic Agent | Local-first CLI/TUI coding agent running open-weight models entirely on your machine via a llama.cpp fork, with 56 built-in tools, MCP support, and a five-layer memory system; no account or API key required |
+| Lifeboat | Failover for coding agents: when Claude Code hits a rate limit, ban, or outage, hands the task to Aider, OpenCode, or a local Ollama model with context carried over (MIT) |
+| fx (Vercel Labs) | Tiny open-source coding agent harness written in Zig; model-agnostic, Unix-shell-like output, and embeddable in agent sandboxes |
+| cc-code | Rust-native terminal agent compatible with Claude Code `.claude/` config; multi-model (DeepSeek/MiMo/GLM) with ~50MB memory and high prompt-cache hit rates |
+| Keen Code | Open-source, context-aware terminal coding agent in Go with multi-provider support, MCPs, subagents, Agent Skills, and hashline edits |
+| Pluribus | Open-source CLI that keeps one versioned AI coding context in sync across Claude Code, Cursor, Copilot, OpenClaw, Windsurf, Continue, and Zed |
+| Tuff | Rust-based CLI for managing coding-agent capabilities (skills, tools, hooks, workflows, MCP servers) from a canonical manifest, with provenance tracking and config-drift detection |
+| Gokin | Open-source terminal AI coding agent for local models via Ollama or providers like DeepSeek and Kimi, with no telemetry and secret redaction |
 | Warp | AI-enhanced terminal with smart command suggestions, agent mode, and collaborative workflows |
 | Task Master | AI task management for agentic coding workflows; turns PRDs into sequenced tasks for Cursor, Claude Code, and other agents |
 | TmuxAI | AI-powered terminal assistant that runs alongside tmux panes to execute and explain commands |
@@ -159,6 +170,21 @@ AI can only produce high-quality results when it understands the **full context*
 | DeerFlow | ByteDance's research-focused AI agent, No.1 GitHub Trending Feb 2026 (25K+ stars) |
 | AXME | Durable AI agent coordination with crash recovery, human approval gates, and open protocol (AXP) |
 | Maestro | Open-source desktop command center for running multiple AI coding agents in parallel |
+| Orca | Open-source IDE for orchestrating multiple AI coding agents (Claude Code, Codex, Cursor, Gemini, OpenCode) side-by-side, each in its own isolated git worktree |
+| AgentTier | Self-hosted Kubernetes-native sandbox runtime for AI coding agents (Claude Code, OpenHands, LangGraph) with Pod + PVC + default-deny NetworkPolicy and optional gVisor isolation |
+| issue-orchestrator | Open-source orchestrator running Claude, Codex, and Gemini agents on GitHub issues in isolated worktrees; treats agent output as a claim that must pass validation and reviewer agents |
+| DevIntern | Picks up tickets from Jira, Linear, Trello, Asana, Azure DevOps, GitHub Issues, or markdown and turns them into self-reviewed pull requests using your chosen agent and model keys |
+| Garcon | Self-hosted browser and mobile workspace for steering parallel Claude Code, Codex, Cursor Agent, OpenCode, Amp, Droid, and Pi sessions with mobile approvals and cross-agent transfers |
+| octomux | Local dashboard for orchestrating parallel Claude Code and Cursor agents in isolated git worktrees, with a unified permission inbox and in-app diff review (MIT) |
+| AgentBridge | Local CLI (MIT) that keeps Claude Code and Codex as live peers in one session for mid-turn review and quota-boundary handoff |
+| intentic | Self-hosted workspace running Claude Code, Codex, OpenCode, and Gemini CLI agents in parallel, each in its own Docker container and git worktree, with browser/mobile UI and per-hunk diff review (MIT) |
+| Ordewell | Plan-first CLI/TUI orchestrator that turns one goal into an ordered plan of agent tasks, each with its own runner, model, thinking effort, and mode; editable before execution (Apache-2.0) |
+| LoopTroop | Local GUI orchestrator for long-running, high-correctness delivery: LLM councils plan, Ralph loops refine, OpenCode worktrees ship |
+| Sillage | Self-hosted, MIT-licensed, mobile-first web UI that drives the native Claude Code and Codex CLIs on your own machine, with server-side sessions, full-text search, an IDE panel, and an installable PWA |
+| Sinatra | Coding agent for Linear and GitHub issues that runs in an isolated sandbox, opens a PR, and runs on your Claude or ChatGPT subscription |
+| Kolega Code | Open-source terminal coding agent where the model writes its own multi-agent workflows (Gigacode), with 15+ providers and MCP support |
+| Dcode (LangChain) | Open-source, model-agnostic coding agent from LangChain giving you control over the software development lifecycle |
+| NarraNexus | Open-source AI agent team workspace with a ready-to-run team of agents that remember, collaborate, and use tools for multi-agent coding workflows |
 
 ### App Builders (No-Code/Low-Code)
 | Tool | Description |
@@ -204,11 +230,20 @@ AI can only produce high-quality results when it understands the **full context*
 | What The Diff | AI tool for summarizing and analyzing code diffs |
 | VibeDoctor | AI code health scanner for vibe-coded apps; detects hallucinated imports, phantom packages, and security issues with MCP support |
 | Relay | Persistent memory for AI coding workflows; gives agents memory of what was built, what broke, and what's next |
+| Kodus | Open-source AI code review for pull requests with repository context, custom rules, Git workflow integration, and BYOK support |
+| Swarm Orchestrator | Audits AI-generated pull requests for eleven cheat patterns (relaxed tests, swallowed errors, fake renames); advisory by default, opt-in merge gate |
+| argot | Guardrail that flags AI-written code foreign to a repo's own patterns (unfamiliar deps, reinvented functions, layering breaks, gamed tests), learned statistically from git history; local Rust binary, no second LLM |
+| twoperson | Two-person rule for AI coding agents: a builder and a reviewer share a file-based review inbox whose schema binds a verdict to an exact commit, so review can't be skipped or misapplied (MIT) |
+| OpenFiles | VS Code extension that opens every file an AI agent edits so linters and type checkers run on it, lists changes for review, and returns problems to Claude Code, Codex, Copilot, Gemini CLI, or Cursor (MIT) |
+| Git AutoReview | VS Code extension for PR review on GitHub, GitLab, and Bitbucket (including self-hosted) with your choice of Claude, Gemini, or GPT and approval before each suggestion posts (BYOK) |
+| VibeAudit | Pre-launch code audit that reads the whole repo and returns a launch-readiness score plus fixes as paste-ready prompts for your AI editor |
+| brooks-lint | Claude Code plugin that reviews code against twelve classic engineering books, citing each finding to its source and scoring codebase health 0–100 |
+| OrcaCode Review | GitHub Action for AI pull request review that posts findings inline on the affected lines and blocks merges on critical severity |
 
 ### Other AI Tools
 | Tool | Description |
 |-----------|------------|
-| Kiro | Spec-driven AI development environment with IDE, CLI, and web workflows; Crew open-source workspace, ChatGPT model support, and Auto model routing |
+| Kiro | Spec-driven AI development environment with IDE, CLI, and web workflows; Crew open-source workspace, GPT-5.6/Claude/open-weight model menu, and Auto model routing |
 | Antigravity | Google's agent-first IDE with multi-agent orchestration and Gemini 3 Pro |
 | Codex | OpenAI coding agent available in app, CLI, IDE extension, and web workflows |
 | Roo Code | Popular open-source VS Code extension with multi-model support |
@@ -219,22 +254,33 @@ AI can only produce high-quality results when it understands the **full context*
 | Open Interpreter | Open-source agent that runs code locally in response to natural language |
 | OpenRouter | Unified API gateway routing to hundreds of LLMs; powers multi-model support in tools like Kilo Code and OpenCode |
 | SpecStory | Captures AI coding chat history (Cursor, Copilot, Claude Code) as searchable, shareable markdown specs |
+| Coworker | Local-first AI coding assistant desktop app with MCP integration, multi-provider support, long-term memory, and a skills marketplace (Electron/React/LangGraph, MIT) |
+| OpenCode Mobile | Open-source (MIT) Android client for the OpenCode coding agent; run sessions from your phone against your own self-hosted server with bring-your-own keys |
+| WithVibe | Self-hostable shared AI development environment for teams: isolated code-seeded envs, shareable live sessions, and an agent gate (security, review, tests, policy) plus human approval |
+| Orkas | Open-source local-first desktop workspace that runs Claude Code, Codex CLI, OpenCode, Cline, and built-in agents in parallel with shared files and approval controls |
+| BitFun | Cross-platform desktop coding agent on a Rust runtime with Git-aware workflows, Deep Review, MCP/Skills/Hooks, remote workspaces, and state-bound Mini Apps |
+| Mirafold | Browser UI for Claude Code, Codex, and Gemini CLI where agents render live charts, diffs, and task lists, with multi-session mission control and E2E-encrypted phone pairing (self-hostable, local-first) |
+| AgentGrid | Desktop app (macOS/Linux/Windows) with an infinite zoomable canvas orchestrating parallel agents; a master pane spawns builder/QA/reviewer workers in isolated git worktrees |
+| agent-top | Terminal `htop`-style dashboard monitoring multiple coding-agent sessions at once — status, token usage, cost, and processes for Claude Code, Codex, Gemini CLI, and more |
+| AIPM | Open-source CLI and registry for finding, installing, publishing, and managing reusable agent skills across Cursor, Claude Code, and Codex |
+| Browy | Open-source AI agent for Chrome that drives real browser tabs through chat, with a built-in DevTools CLI terminal (powered by the GitHub Copilot SDK) |
+| Aura | Open-source semantic layer on top of Git for reviewing AI-generated code, tracking intent and provenance, and surfacing risky change areas |
 
 ---
 
 ## 🚀 2026 AI Development Resources
 
-### **🗓️ Current Snapshot - August 2026** (updated August 24, 2026)
+### **🗓️ Current Snapshot - September 2026** (updated September 26, 2026)
 Use this section as the starting point for weekly maintenance:
 
 | Area | What changed | Source to monitor |
 |------|--------------|------------------|
-| Cursor | **Projects** (Sep 10): coordinator agent plans work, delegates to subagents, maintains shared context across months. Cloud agents run on their own computer; closing laptop doesn't stop it. **Subscriptions** let agents watch Slack/PRs and wake on signals. **Self-hosted machines** (Sep 2): keep codebase, builds, secrets on internal infra; dynamic pool scheduling, cloud agents on AWS Lambda/Coder/Cloudflare/Daytono/Modal/E2B, computer use on Linux/Mac. **Origin** (Aug 17, early beta all paid plans): code hosting with PRs, GitHub sync, Vercel/Depot/Buildkite app extensions. Cloud Agent Builds (Aug 13), Custom modes, subagents on isolated VMs, `/goal`, mid-run steering, Cursor Router for Auto mode, iPad app, Google Workspace plugins remain. | [Cursor changelog](https://cursor.com/changelog) |
-| Devin Desktop (formerly Windsurf) | v3.10.31 (Sep 16): Restricted Mode blocks nested-object workspace settings (CVE-2026-81376); recent sessions restore transcript instantly. v3.10.27 (Sep 15): drag files onto agent panel, remote SSH sessions reconnect without lock error, Devin Fusion activates without Fable 5.1 as lead model. v3.10.23 (Sep 10): **remote agent hosts** via SSH with saved hosts and status dots; local sessions deletable; faster startup; ACP always-on (Enable ACP toggle removed); MCP authorization opens provider directly; legacy Cascade entry points removed; files Devin edits count toward LOC analytics. Devin Cloud: network access allowlist cards, archive with open PRs closes them, image preview carousel, outage message queuing. | [Devin Desktop changelog](https://docs.devin.ai/desktop/changelog) |
-| Claude Code | `opus` now resolves to Opus 5 on the Anthropic API (requires v2.1.219+) and `sonnet` to Sonnet 5 (v2.1.197+); alias resolution is provider-dependent (e.g. Sonnet 4.6 on Claude Platform on AWS, Sonnet 4.5 on Bedrock/Google Cloud, Opus 4.6 on Microsoft Foundry). `default` clears model overrides; `best` uses Fable 5 where available else the latest Opus; `sonnet[1m]`/`opus[1m]` select 1M-token windows; `opusplan` uses Opus in plan mode then Sonnet for execution. Fable 5 remains the most capable model for tasks larger than a single sitting and may bill to usage credits with an interactive consent prompt. | [Claude Code model config](https://code.claude.com/docs/en/model-config) |
+| Cursor | **Rollouts & Security Review** (Sep 23): two new bots for the last mile of shipping code — Rollouts watches every change as it deploys and reports health per environment (verified healthy / regression detected / inconclusive), with monitoring plans, deploy tracking, and regression handoff to cloud agents; Security Review reads every PR in codebase context and reports exploitable bugs (injection, auth bypasses, committed secrets, SSRF, unsafe deserialization, vulnerable dependency changes) with severity, attack path, and proposed fix, plus team rules. Both on Teams/Enterprise. **Projects** (Sep 10): coordinator agent plans work, delegates to thousands of subagents, maintains shared context across months. Cloud agents run on their own computer; closing laptop doesn't stop it. **Subscriptions** let agents watch Slack/PRs and wake on signals. **Self-hosted machines** (Sep 2): keep codebase, builds, secrets on internal infra; dynamic pool scheduling, cloud agents on AWS Lambda/Coder/Cloudflare/Daytona/Modal/Namespace/Vercel/E2B, computer use on Linux/Mac. **Origin** (Aug 17, early beta all paid plans): code hosting with PRs, GitHub sync, Vercel/Depot/Buildkite app extensions. Cloud Agent Builds (Aug 13), start-from-scratch agents without a repo (Aug 27), Custom modes, subagents on isolated VMs, `/goal`, mid-run steering, Cursor Router for Auto mode, iPad app, Google Workspace plugins remain. | [Cursor changelog](https://cursor.com/changelog) |
+| Devin Desktop (formerly Windsurf) | v3.10.35 (Sep 24): fixes startup crash on Apple M6 Macs, a memory leak in the Agent Command Center, folder selection for agents on SSH/WSL hosts, and makes ACP client MCP servers (HTTP/SSE) usable and listed in `/mcp`. v3.10.31 (Sep 16): Restricted Mode blocks nested-object workspace settings (CVE-2026-81376); recent sessions restore transcript instantly. v3.10.27 (Sep 15): drag files onto agent panel, remote SSH sessions reconnect without lock error, Devin Fusion activates without Fable 5.1 as lead model. v3.10.23 (Sep 10): **remote agent hosts** via SSH with saved hosts and status dots; local sessions deletable; faster startup; ACP always-on (Enable ACP toggle removed); MCP authorization opens provider directly; legacy Cascade entry points removed; files Devin edits count toward LOC analytics. v3.9.19 (Sep 8): **Cascade removed** — Devin Local is now the only agent, with a Continue in Devin Local migration prompt. Devin Cloud: network access allowlist cards, archive with open PRs closes them, image preview carousel, outage message queuing. | [Devin Desktop changelog](https://docs.devin.ai/desktop/changelog) |
+| Claude Code | `opus` now resolves to Opus 5.5 on the Anthropic API, Claude Platform on AWS, Amazon Bedrock, and Google Cloud's Agent Platform (requires v2.1.280+), and `sonnet` to Sonnet 5 on the Anthropic API (v2.1.197+); alias resolution is provider-dependent (e.g. Sonnet 4.6 on Claude Platform on AWS, Sonnet 4.5 on Bedrock/Google Cloud, Opus 4.6 / Sonnet 4.5 on Microsoft Foundry). `default` clears model overrides; `best` uses the model `fable` resolves to where available else the same as `opus`; `fable` resolves to Fable 5.1 unless `ANTHROPIC_DEFAULT_FABLE_MODEL` is set (Fable 5 in Claude apps gateway sessions); `sonnet[1m]`/`opus[1m]` select 1M-token windows; `opusplan` uses Opus in plan mode then Sonnet for execution. Fable 5.1 remains the most capable model for tasks larger than a single sitting and may bill to usage credits with an interactive consent prompt. | [Claude Code model config](https://code.claude.com/docs/en/model-config) |
 | GitHub Copilot CLI | `gh copilot` is now generally available for Copilot subscribers. Old `github/gh-copilot` extension is deprecated. | [GitHub Copilot CLI GA](https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/) |
 | Codex | GPT-5.3-Codex available with paid ChatGPT plans across app, CLI, IDE extension, and web. | [OpenAI Codex](https://en.wikipedia.org/wiki/OpenAI_Codex) |
-| Kiro | AWS's agentic IDE, now positioned around "agentic engineering": spec-driven development, automated reasoning checks on requirements, property-based tests, parallel agents, and cloud sessions in IDE and CLI. "Crew" open-source development workspace, headless CLI for CI/CD PR review and bug fixing, ChatGPT model support, and Auto mode that picks the best model per task by complexity/latency/cost. ACP-compatible, supports AGENTS.md, Skills.md, and MCP. Available as IDE, CLI, Web, and Mobile. GitLab/GitHub integration. Pro Max tier at $100/month with 5,000 credits. Based on Code OSS with VS Code settings import. | [Kiro](https://kiro.dev/) |
+| Kiro | AWS's agentic IDE, positioned around "agentic engineering": spec-driven development (prompts become requirements, architectural designs, and sequenced tasks), automated reasoning checks for contradictions/gaps in requirements, property-based tests (fuzz-style assertions across all inputs), parallel agents, and cloud sessions in IDE and CLI. "Crew" open-source development workspace, headless CLI for CI/CD PR review and bug fixing. Model menu spans `auto` (1.0x baseline credit cost, picks the best model per task by complexity/latency/cost), GPT-5.6 tiers (`sol` 4.4x, `terra` 2.2x, `luna` 1.1x), Claude Fable 5.1 (6.0x, enterprise preview, 1M context, US East only), Opus 5/4.8/4.7/4.6/4.5 (2.2x), Sonnet 5/4.6/4.5/4 (1.3x), Haiku 4.5 (0.4x), and open-weight DeepSeek 3.2, MiniMax M2.5/M2.1, GLM-5, and Qwen3-Coder-Next. ACP-compatible, supports AGENTS.md, Skills.md, and MCP. Available as IDE, CLI, Web, and Mobile. GitLab/GitHub integration. Credit-based pricing with no daily/weekly rate limits; Pro Max tier at $100/month with 5,000 credits. Based on Code OSS with VS Code settings import. | [Kiro](https://kiro.dev/) |
 | Qodo | Qodo is the current name to track for CodiumAI-style code review, testing, and quality workflows. Open-source PR Agent available. | [Qodo](https://www.qodo.ai/) |
 
 ### **📊 AI Coding Trends 2026**
@@ -312,17 +358,17 @@ Comprehensive analysis of leading AI development tools:
 |------|-----------|----------|-------------|
 | **Devin Enterprise** | Full-stack development, complex problem solving, cloud VM execution | Complete project execution, research tasks | Requires clear specifications, high computational cost |
 | **Manus Pro** | Multi-agent coordination, enterprise workflows | Large team projects, complex architectures | Steep learning curve, enterprise pricing |
-| **Claude Code** | Terminal-native planning, editing, and automation with provider-specific model aliases. Fable 5 for sustained long autonomous sessions | Infrastructure as code, data processing, large refactors | Requires strong prompt discipline and usage controls |
-| **Cursor Agents** | Parallel agents, worktrees, local/cloud/SSH environments, Design Mode, Bugbot code review | Product engineering, UI iteration, repo-scale refactors | Best value is inside Cursor workflows |
+| **Claude Code** | Terminal-native planning, editing, and automation with provider-specific model aliases. Fable 5.1 for sustained long autonomous sessions | Infrastructure as code, data processing, large refactors | Requires strong prompt discipline and usage controls |
+| **Cursor Agents** | Parallel agents, worktrees, local/cloud/SSH environments, Design Mode, Bugbot code review, Rollouts deploy monitoring, Security Review | Product engineering, UI iteration, repo-scale refactors | Best value is inside Cursor workflows |
 | **Codex** | OpenAI coding agent across app, CLI, IDE extension, and web with GPT-5.3-Codex | Multi-step coding, tests, codebase automation, security-focused work | Availability and model access vary by plan |
 
 #### **IDE-Integrated AI Assistants**
 | Tool | Context Model | Integration Depth | Unique Features |
 |------|---------------|------------------|----------------|
-| **Cursor** | Repository and agent-worktree oriented | Deep IDE and agent integration | Agents Window, parallel agents, Design Mode, `/worktree`, `/best-of-n`, Bugbot, Canvas, Cursor Router, iPad, Google Workspace plugins, Cloud Agent Builds |
+| **Cursor** | Repository and agent-worktree oriented | Deep IDE and agent integration | Agents Window, parallel agents, Projects, Design Mode, `/worktree`, `/best-of-n`, Bugbot, Rollouts, Security Review, Canvas, Cursor Router, iPad, Google Workspace plugins, Cloud Agent Builds |
 | **GitHub Copilot Agent Mode / CLI** | Repository, PRs, terminal sessions, GitHub context | GitHub ecosystem | Plan mode, autopilot, MCP, plugins, skills, remote delegation |
-| **Devin Desktop (formerly Windsurf)** | Editor, Cascade, terminal, and local/cloud agent handoff | Agentic IDE and terminal workflows | Devin for Terminal, Devin Local, multi-model access (GPT-5.6), subagents (preview), Adaptive model router, Agent Command Center, shareable local conversations, VS Code 1.126 base |
-| **Kiro** | Specs, tasks, hooks, and codebase context | IDE, CLI, and web | Spec-driven development, agent hooks, production-oriented planning, TDD support |
+| **Devin Desktop (formerly Windsurf)** | Editor, Devin Local, terminal, and local/cloud agent handoff | Agentic IDE and terminal workflows | Devin for Terminal, Devin Local (Cascade removed), remote agent hosts over SSH, multi-model access (GPT-5.6), subagents (preview), Adaptive model router, Agent Command Center, shareable local conversations, VS Code 1.126 base |
+| **Kiro** | Specs, tasks, hooks, and codebase context | IDE, CLI, and web | Spec-driven development, agent hooks, automated reasoning checks, property-based tests, parallel agents, production-oriented planning, TDD support |
 
 #### **CLI and Automation Tools**
 | Tool | Primary Use | Automation Level | Integration |
@@ -554,7 +600,7 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 
 ---
 ### Cursor (Sep 2026)
-- [Cursor Changelog](https://cursor.com/changelog) — Projects, self-hosted machines, subscriptions, Origin code hosting
+- [Cursor Changelog](https://cursor.com/changelog) — Projects, self-hosted machines, subscriptions, Rollouts and Security Review bots, Origin code hosting
 - https://github.com/PatrickJS/awesome-cursorrules
 - https://github.com/grapeot/devin.cursorrules
 - https://github.com/sanjeed5/awesome-cursor-rules-mdc
@@ -649,7 +695,8 @@ Example source: OpenAI reports GPT-5.3-Codex benchmark results for SWE-Bench Pro
 
 ---
 ### Kiro
-- https://kiro.dev/ - Agentic IDE, CLI, and Web with spec-driven development, Crew open-source workspace, property-based tests, cloud sandboxes, and GitHub/GitLab integration
+- https://kiro.dev/ - Agentic IDE, CLI, and Web with spec-driven development, Crew open-source workspace, automated reasoning checks, property-based tests, parallel agents, cloud sandboxes, and GitHub/GitLab integration
+- https://kiro.dev/changelog/ - Release notes for the IDE, CLI, and Web
 - https://github.com/kirodotdev/kiro-mcp
 - https://github.com/kirodotdev/awesome-kiro
 
