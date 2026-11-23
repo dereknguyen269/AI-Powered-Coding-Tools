@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 9 * * 1'
+
+jobs:
+  kit:
+    name: Installer and unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Installer smoke test
+        run: sh tests/test_install.sh
+      - name: Python unit tests
+        run: python3 -m unittest discover -s tests -v
+
+  links:
+    name: Link check
+    # Network-dependent: scheduled or manual only, so third-party flakiness never blocks a PR.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - name: Check documentation links
+        run: |
+          for f in README.md CONTRIBUTING.md PR_CHECKLIST.md docs/GUIDE.md templates/AGENTS.md templates/prompts.md templates/checklist.md; do
+            python3 scripts/check_links.py "$f"
+          done
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check-reports
+          path: '*-link-check.md'

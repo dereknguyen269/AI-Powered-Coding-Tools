@@ -5,6 +5,7 @@ Properly extracts and checks markdown links without formatting issues.
 """
 
 import re
+import os
 import requests
 import sys
 from urllib.parse import urlparse
@@ -35,7 +36,7 @@ def should_skip_link(url):
     """
     Return True for links that should not be checked with HTTP.
     """
-    return url.strip().startswith("#")
+    return url.strip().startswith("#") or url.strip().startswith("mailto:")
 
 def check_link(url, timeout=10):
     """
@@ -100,6 +101,7 @@ def main():
         working = 0
         broken = 0
         skipped = 0
+        results = []
         
         for text, url, line_num in links:
             print(f"Line {line_num}: [{text}]({url})")
@@ -107,6 +109,19 @@ def main():
             if should_skip_link(url):
                 print("  ⏭️  Skipped (internal anchor)")
                 skipped += 1
+                print()
+                continue
+
+            if not url.startswith(("http://", "https://")):
+                local = os.path.join(os.path.dirname(input_file) or ".", url.split("#")[0])
+                if os.path.exists(local):
+                    print("  ✅ OK (local file)")
+                    working += 1
+                    results.append((text, url, line_num, 200, None))
+                else:
+                    print(f"  ❌ Missing local file: {local}")
+                    broken += 1
+                    results.append((text, url, line_num, None, f"missing {local}"))
                 print()
                 continue
             
@@ -132,6 +147,7 @@ def main():
                 broken += 1
             
             print()
+            results.append((text, url, line_num, status, error))
             time.sleep(0.5)  # Be nice to servers
         
         print("=" * 80)
@@ -155,11 +171,7 @@ def main():
             
             if broken > 0:
                 f.write(f"## Broken Links\n\n")
-                for text, url, line_num in links:
-                    if should_skip_link(url):
-                        continue
-
-                    status, error = check_link(url)
+                for text, url, line_num, status, error in results:
                     if status is None or status >= 400:
                         f.write(f"### Line {line_num}: [{text}]({url})\n")
                         f.write(f"- URL: {url}\n")
@@ -170,6 +182,7 @@ def main():
                         f.write("\n")
         
         print(f"\nReport saved to: {report_file}")
+        sys.exit(1 if broken else 0)
             
     except FileNotFoundError:
         print(f"Error: File not found: {input_file}")
