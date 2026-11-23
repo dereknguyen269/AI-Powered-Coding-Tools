@@ -46,5 +46,29 @@ else
   echo "ok   rejects bad --tool"
 fi
 
+# Spaces in target paths must survive shell quoting.
+mkdir -p "$tmp/project with spaces"
+sh "$repo/install.sh" --target "$tmp/project with spaces" --tool all > /dev/null
+check "spaces: AGENTS.md" "$tmp/project with spaces/AGENTS.md"
+check "spaces: cursor rules" "$tmp/project with spaces/.cursor/rules/ai-kit.mdc"
+
+# Missing option values must return a usage error, not a shell crash or partial install.
+for flag in --target --tool; do
+  if sh "$repo/install.sh" "$flag" > "$tmp/err" 2>&1; then
+    echo "FAIL: accepted missing value for $flag"; fail=1
+  elif ! grep -q "missing value for $flag" "$tmp/err"; then
+    echo "FAIL: unclear missing value error for $flag"; fail=1
+  else
+    echo "ok   rejects missing value for $flag"
+  fi
+done
+
+# Existing files, including the tool-specific rule, must survive without --force.
+echo "keep cursor" > "$tmp/cursor/.cursor/rules/ai-kit.mdc"
+sh "$repo/install.sh" --target "$tmp/cursor" --tool cursor > /dev/null
+[ "$(cat "$tmp/cursor/.cursor/rules/ai-kit.mdc")" = "keep cursor" ] || { echo "FAIL: overwrote cursor rule without --force"; fail=1; }
+sh "$repo/install.sh" --target "$tmp/cursor" --tool cursor --force > /dev/null
+grep -q 'alwaysApply: true' "$tmp/cursor/.cursor/rules/ai-kit.mdc" || { echo "FAIL: --force did not overwrite cursor rule"; fail=1; }
+
 [ "$fail" -eq 0 ] && echo "all install tests passed"
 exit "$fail"

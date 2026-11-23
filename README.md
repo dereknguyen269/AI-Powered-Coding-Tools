@@ -24,8 +24,11 @@ sh install.sh --target . --tool copilot    # AGENTS.md + .github/copilot-instruc
 
 Existing files are skipped unless you pass `--force`.
 
-Then open `AGENTS.md` in the target repo and fill in three sections: **Project**,
-**Commands**, **Stop and ask**. That is the whole setup.
+Then open `AGENTS.md` in the target repo and fill in **Project** and **Commands**;
+adjust **Stop and ask** for project-specific risks. Tool-specific files are snapshots,
+not live references: copy your edited rules into those files too, or rerun the installer
+with `--force` only if overwriting all installed templates is safe. See the
+[worked example](docs/EXAMPLE.md).
 
 ## What you get
 

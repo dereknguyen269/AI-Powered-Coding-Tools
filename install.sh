@@ -9,8 +9,10 @@ force=0
 
 while [ $# -gt 0 ]; do
   case $1 in
-    --target) target=$2; shift 2 ;;
-    --tool) tool=$2; shift 2 ;;
+    --target|--tool)
+      [ $# -ge 2 ] && [ -n "$2" ] && [ "${2#--}" = "$2" ] || { echo "missing value for $1" >&2; exit 2; }
+      if [ "$1" = --target ]; then target=$2; else tool=$2; fi
+      shift 2 ;;
     --force) force=1; shift ;;
     -h|--help) sed -n '2,3p' "$0"; exit 0 ;;
     *) echo "unknown arg: $1" >&2; exit 2 ;;

@@ -1,7 +1,6 @@
 # 🚀 AI-Powered Coding Tools: Best Practices & Mastery Guide
 
-|> Last reviewed: September 26, 2026. AI coding tools change quickly; verify pricing,
-> model availability, and enterprise controls before making production decisions.
+> Historical snapshot, last reviewed September 26, 2026. Tool versions, prices, model availability, and enterprise controls below are **not maintained as current facts**. Check each vendor's official documentation before making a decision. Links are checked weekly; a working link does not verify its claims.
 
 <div align="center">
     <img src="https://img.shields.io/badge/AI--Powered-blue?style=for-the-badge&logo=artificial-intelligence" />
