@@ -24,10 +24,12 @@ sh install.sh --target . --tool copilot    # AGENTS.md + .github/copilot-instruc
 
 Existing files are skipped unless you pass `--force`.
 
+Follow the [step-by-step usage guide](docs/USAGE.md) after installation.
+
 Then open `AGENTS.md` in the target repo and fill in **Project** and **Commands**;
 adjust **Stop and ask** for project-specific risks. Tool-specific files are snapshots,
-not live references: copy your edited rules into those files too, or rerun the installer
-with `--force` only if overwriting all installed templates is safe. See the
+not live references: copy your edited rules into those files too. `--force` overwrites
+customizations with the generic template; it does not synchronize edits. See the
 [worked example](docs/EXAMPLE.md).
 
 ## What you get
@@ -35,7 +37,7 @@ with `--force` only if overwriting all installed templates is safe. See the
 | File in your repo | Purpose |
 | --- | --- |
 | `AGENTS.md` | Single source of truth: project facts, commands, working rules, definition of done |
-| `CLAUDE.md` / `.cursor/rules/ai-kit.mdc` / `.github/copilot-instructions.md` | Same content at each tool's expected path — no drift |
+| `CLAUDE.md` / `.cursor/rules/ai-kit.mdc` / `.github/copilot-instructions.md` | Initial copies at each tool's expected path; update manually after customizing |
 | `docs/ai/prompts.md` | Spec, plan, implement, test-first, review, debug, commit, refactor prompts |
 | `docs/ai/checklist.md` | Pre-merge review: correctness, trust boundaries, deps, hygiene, rollback |
 

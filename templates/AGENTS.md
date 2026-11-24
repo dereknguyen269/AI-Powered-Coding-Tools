@@ -1,8 +1,9 @@
 # AGENTS.md
 
-Instructions for any AI coding agent working in this repository. Tool-specific files
-(`CLAUDE.md`, `.cursor/rules/*.mdc`, `.github/copilot-instructions.md`) point here — keep
-this file as the single source of truth.
+Instructions for AI coding agents working in this repository. If the installer created
+`CLAUDE.md`, `.cursor/rules/ai-kit.mdc`, or `.github/copilot-instructions.md`, those
+are independent copies, not live references. Keep their contents consistent after
+editing this file; preserve Cursor's `.mdc` frontmatter.
 
 ## Project
 

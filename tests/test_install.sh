@@ -37,7 +37,7 @@ sh "$repo/install.sh" --target "$tmp/claude" --tool claude > /dev/null
 
 # --force must overwrite
 sh "$repo/install.sh" --target "$tmp/claude" --tool claude --force > /dev/null
-grep -q 'Instructions for any AI coding agent' "$tmp/claude/AGENTS.md" || { echo "FAIL: --force did not overwrite"; fail=1; }
+grep -q 'Instructions for AI coding agents' "$tmp/claude/AGENTS.md" || { echo "FAIL: --force did not overwrite"; fail=1; }
 
 # Bad tool must exit non-zero
 if sh "$repo/install.sh" --target "$tmp" --tool nope > /dev/null 2>&1; then
