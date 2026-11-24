@@ -9,8 +9,8 @@ No framework, no dependencies, no runtime. Plain Markdown and one POSIX shell sc
 ## Quick start
 
 ```bash
-git clone https://github.com/dereknguyen269/AI-Powered-Coding-Tools.git
-cd AI-Powered-Coding-Tools
+git clone https://github.com/dereknguyen269/AI-Starter-Kit.git
+cd AI-Starter-Kit
 sh install.sh --target ~/code/my-project          # all tools
 ```
 
